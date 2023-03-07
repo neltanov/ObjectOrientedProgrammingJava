@@ -2,6 +2,7 @@ package ru.nsu.fit.neltanov;
 
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class InputCommands {
@@ -11,7 +12,7 @@ public class InputCommands {
         try {
             FileReader fileReader = new FileReader(filename);
             Scanner input = new Scanner(fileReader);
-            commandList = scan(input);
+            commandList = scanCommands(input);
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
@@ -20,17 +21,20 @@ public class InputCommands {
     InputCommands() {
         try {
             Scanner input = new Scanner(System.in);
-            commandList = scan(input);
+            commandList = scanCommands(input);
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
     }
 
-    public static ArrayList<String> scan(Scanner input) {
+    public static ArrayList<String> scanCommands(Scanner input) {
         String buf;
         while (input.hasNext()) {
             buf = input.next();
             commandList.add(buf);
+            if (Objects.equals(buf, "PRINT")) {
+                break;
+            }
         }
         return commandList;
     }

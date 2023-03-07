@@ -1,9 +1,7 @@
 package ru.nsu.fit.neltanov;
 
-import java.io.FileNotFoundException;
-
 public class Main {
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
 
         InputCommands commands;
         if (args.length > 0) {
@@ -14,7 +12,7 @@ public class Main {
         }
         commands.printCommands();
 
-        StackCalculator calculator = new StackCalculator();
-        calculator.Calculate(InputCommands.commandList);
+//        StackCalculator calculator = new StackCalculator();
+//        calculator.Calculate(InputCommands.commandList);
     }
 }
