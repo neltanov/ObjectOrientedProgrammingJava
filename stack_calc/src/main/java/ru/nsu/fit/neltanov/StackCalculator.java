@@ -1,35 +1,48 @@
 package ru.nsu.fit.neltanov;
 
-import ru.nsu.fit.neltanov.commands.*;
+import ru.nsu.fit.neltanov.commands.Command;
 
-import java.util.*;
+import java.io.*;
+import java.lang.reflect.InvocationTargetException;
 
 public class StackCalculator {
-    private Stack<String> stack = new Stack<>();
-    private Map<String, Double> defineValues = new HashMap<>();
-    public Integer Calculate(List<String> commands) {
-        Integer result = 0;
+    private final ExecutionContext context = new ExecutionContext();
+    private final CommandFactory factory = new CommandFactory();
 
-        while (!stack.empty()) {
-            Operation operation = createOperation("PUSH");
-        }
-
-        return result;
+    StackCalculator() {
+        InputStreamReader inputStreamReader = new InputStreamReader(System.in);
+        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+        executeCommands(bufferedReader);
     }
-    public Operation createOperation(String type) {
-        Operation operation = null;
-        switch (type) {
-            case "PUSH" -> operation = new Push();
-            case "POP" -> operation = new Pop();
-            case "SUM" -> operation = new Sum();
-            case "SUBSTRACT" -> operation = new Substract();
-            case "MULTIPLY" -> operation = new Multiply();
-            case "DIVIDE" -> operation = new Divide();
-            case "SQRT" -> operation = new Sqrt();
-            case "DEFINE" -> operation = new Define();
-            case "PRINT" -> operation = new Print();
-            case "COMMENT" -> operation = new Comment();
+
+    StackCalculator(String commandPath) {
+        try {
+            Class<?> myClass = Class.forName("ru.nsu.fit.neltanov.Main");
+            InputStream inputStream = myClass.getResourceAsStream(commandPath);
+            if (inputStream != null) {
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                executeCommands(bufferedReader);
+            } else {
+                throw new NullPointerException();
+            }
+        } catch (ClassNotFoundException | NullPointerException e) {
+            System.out.println(e.getMessage());
         }
-        return operation;
+    }
+
+    public void executeCommands(BufferedReader bufferedReader) {
+        try {
+            String contextCommand;
+            Command command;
+            while ((contextCommand = bufferedReader.readLine()) != null) {
+                context.setContextCommand(contextCommand);
+                command = factory.getCommand(context.getCommandName());
+                command.execute(context);
+            }
+        } catch (IOException | InvocationTargetException | NoSuchMethodException | InstantiationException |
+                 IllegalAccessException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

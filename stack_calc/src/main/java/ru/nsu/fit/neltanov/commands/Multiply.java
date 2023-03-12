@@ -1,4 +1,12 @@
 package ru.nsu.fit.neltanov.commands;
 
-public class Multiply implements Operation {
+import ru.nsu.fit.neltanov.ExecutionContext;
+
+public class Multiply implements Command {
+    @Override
+    public void execute(ExecutionContext context) {
+        Double a = context.popNumberFromStack();
+        Double b = context.popNumberFromStack();
+        context.pushNumberToStack(a * b);
+    }
 }

@@ -2,17 +2,12 @@ package ru.nsu.fit.neltanov;
 
 public class Main {
     public static void main(String[] args) {
-
-        InputCommands commands;
+        StackCalculator calculator;
         if (args.length > 0) {
-            commands = new InputCommands(args[0]);
+            calculator = new StackCalculator(args[0]);
         }
         else {
-            commands = new InputCommands();
+            calculator = new StackCalculator();
         }
-        commands.printCommands();
-
-//        StackCalculator calculator = new StackCalculator();
-//        calculator.Calculate(InputCommands.commandList);
     }
 }

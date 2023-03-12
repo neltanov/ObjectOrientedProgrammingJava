@@ -1,4 +1,10 @@
 package ru.nsu.fit.neltanov.commands;
 
-public class Pop implements Operation {
+import ru.nsu.fit.neltanov.ExecutionContext;
+
+public class Pop implements Command {
+    @Override
+    public void execute(ExecutionContext context) {
+        context.popNumberFromStack();
+    }
 }
