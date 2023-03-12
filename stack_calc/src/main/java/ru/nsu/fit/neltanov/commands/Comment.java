@@ -2,9 +2,15 @@ package ru.nsu.fit.neltanov.commands;
 
 import ru.nsu.fit.neltanov.ExecutionContext;
 
+import java.util.List;
+
 public class Comment implements Command {
     @Override
     public void execute(ExecutionContext context) {
-        System.out.println(context.getCommandArguments().get(1));
+        List<String> commandArguments = context.getCommandArguments();
+        for (String commandArgument : commandArguments) {
+            System.out.print(commandArgument + " ");
+        }
+        System.out.println("\n");
     }
 }
