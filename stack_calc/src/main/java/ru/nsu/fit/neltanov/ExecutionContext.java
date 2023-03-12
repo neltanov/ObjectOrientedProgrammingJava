@@ -35,7 +35,7 @@ public class ExecutionContext {
         return command.get(0);
     }
 
-    public ArrayList<String> getCommandArguments() {
-        return (ArrayList<String>) command;
+    public List<String> getCommandArguments() {
+        return command;
     }
 }
