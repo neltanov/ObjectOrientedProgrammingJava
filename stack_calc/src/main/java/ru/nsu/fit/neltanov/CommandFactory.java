@@ -17,20 +17,19 @@ public class CommandFactory {
         try {
             Class<?> myClass = Class.forName("ru.nsu.fit.neltanov.CommandFactory");
             InputStream inputStream = myClass.getResourceAsStream("commandNames.txt");
-            if (inputStream != null) {
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                String line, commandName;
-                String[] matching;
-                Class<?> command;
-                while ((line = bufferedReader.readLine()) != null) {
-                    matching = line.split(" ");
-                    commandName = matching[0];
-                    command = Class.forName(matching[1]);
-                    commands.put(commandName, command);
-                }
-            } else {
+            if (inputStream == null) {
                 throw new NullPointerException();
+            }
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+            String line, commandName;
+            String[] matching;
+            Class<?> command;
+            while ((line = bufferedReader.readLine()) != null) {
+                matching = line.split(" ");
+                commandName = matching[0];
+                command = Class.forName(matching[1]);
+                commands.put(commandName, command);
             }
         } catch (ClassNotFoundException | NullPointerException | IOException e) {
             System.out.println(e.getMessage());
@@ -39,6 +38,10 @@ public class CommandFactory {
 
     public Command getCommand(String commandName) throws NoSuchMethodException, InvocationTargetException,
             InstantiationException, IllegalAccessException {
-        return (Command) commands.get(commandName).getDeclaredConstructor().newInstance();
+        Class<?> commandMetaInfo = commands.get(commandName);
+        if (commandMetaInfo == null) {
+            throw new NullPointerException();
+        }
+        return (Command) commandMetaInfo.getDeclaredConstructor().newInstance();
     }
 }

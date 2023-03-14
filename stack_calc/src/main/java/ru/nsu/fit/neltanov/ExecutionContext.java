@@ -12,7 +12,15 @@ public class ExecutionContext {
     }
 
     public Double getNumberFromStack() {
-        return stack.get(0);
+        Double stackNumber = null;
+        try {
+            stackNumber = stack.pop();
+            stack.push(stackNumber);
+        }
+        catch (EmptyStackException e) {
+            System.out.println(e.getMessage());
+        }
+        return stackNumber;
     }
 
     public void pushNumberToStack(Double number) {
@@ -24,7 +32,13 @@ public class ExecutionContext {
     }
 
     public void setParameterValue(String parameter, Double value) {
-        parameters.put(parameter, value);
+        try {
+            parameters.put(parameter, value);
+        }
+        catch (UnsupportedOperationException | ClassCastException |
+               NullPointerException | IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
     public void setContextCommand(String command) {

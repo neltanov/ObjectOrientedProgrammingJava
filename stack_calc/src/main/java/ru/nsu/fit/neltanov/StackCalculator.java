@@ -36,6 +36,9 @@ public class StackCalculator {
             String contextCommand;
             Command command;
             while ((contextCommand = bufferedReader.readLine()) != null) {
+                if (contextCommand.equals("")) {
+                    break;
+                }
                 context.setContextCommand(contextCommand);
                 command = factory.getCommand(context.getCommandName());
                 command.execute(context);
