@@ -1,6 +1,6 @@
-package ru.nsu.fit.neltanov;
+package ru.nsu.fit.neltanov.calculator;
 
-import ru.nsu.fit.neltanov.commands.Command;
+import ru.nsu.fit.neltanov.calculator.commands.Command;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
@@ -9,15 +9,15 @@ public class StackCalculator {
     private final ExecutionContext context = new ExecutionContext();
     private final CommandFactory factory = new CommandFactory();
 
-    StackCalculator() {
+    public StackCalculator() {
         InputStreamReader inputStreamReader = new InputStreamReader(System.in);
         BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
         executeCommands(bufferedReader);
     }
 
-    StackCalculator(String commandPath) {
+    public StackCalculator(String commandPath) {
         try {
-            Class<?> myClass = Class.forName("ru.nsu.fit.neltanov.Main");
+            Class<?> myClass = Class.forName("ru.nsu.fit.neltanov.calculator.Main");
             InputStream inputStream = myClass.getResourceAsStream(commandPath);
             if (inputStream != null) {
                 InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
@@ -48,4 +48,5 @@ public class StackCalculator {
             System.out.println(e.getMessage());
         }
     }
+    //public Optional<Double> exec
 }

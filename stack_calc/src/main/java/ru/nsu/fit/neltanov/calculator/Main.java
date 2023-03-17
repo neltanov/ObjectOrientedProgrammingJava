@@ -1,4 +1,4 @@
-package ru.nsu.fit.neltanov;
+package ru.nsu.fit.neltanov.calculator;
 
 public class Main {
     public static void main(String[] args) {

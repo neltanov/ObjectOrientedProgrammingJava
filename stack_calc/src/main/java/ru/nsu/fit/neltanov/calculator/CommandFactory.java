@@ -1,6 +1,6 @@
-package ru.nsu.fit.neltanov;
+package ru.nsu.fit.neltanov.calculator;
 
-import ru.nsu.fit.neltanov.commands.Command;
+import ru.nsu.fit.neltanov.calculator.commands.Command;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -9,13 +9,14 @@ import java.io.InputStreamReader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class CommandFactory {
     private final Map<String, Class<?>> commands = new HashMap<>();
 
     CommandFactory() {
         try {
-            Class<?> myClass = Class.forName("ru.nsu.fit.neltanov.CommandFactory");
+            Class<?> myClass = Class.forName("ru.nsu.fit.neltanov.calculator.CommandFactory");
             InputStream inputStream = myClass.getResourceAsStream("commandNames.txt");
             if (inputStream == null) {
                 throw new NullPointerException();
@@ -38,10 +39,7 @@ public class CommandFactory {
 
     public Command getCommand(String commandName) throws NoSuchMethodException, InvocationTargetException,
             InstantiationException, IllegalAccessException {
-        Class<?> commandMetaInfo = commands.get(commandName);
-        if (commandMetaInfo == null) {
-            throw new NullPointerException();
-        }
+        Class<?> commandMetaInfo = Objects.requireNonNull(commands.get(commandName));
         return (Command) commandMetaInfo.getDeclaredConstructor().newInstance();
     }
 }
