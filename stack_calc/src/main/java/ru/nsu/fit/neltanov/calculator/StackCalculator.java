@@ -19,12 +19,11 @@ public class StackCalculator {
         try {
             Class<?> myClass = Class.forName("ru.nsu.fit.neltanov.calculator.Main");
             InputStream inputStream = myClass.getResourceAsStream(commandPath);
-            if (inputStream != null) {
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                bufferedReader = new BufferedReader(inputStreamReader);
-            } else {
+            if (inputStream == null) {
                 throw new NullPointerException();
             }
+            InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+            bufferedReader = new BufferedReader(inputStreamReader);
         } catch (ClassNotFoundException | NullPointerException e) {
             System.out.println(e.getMessage());
         }
@@ -32,18 +31,20 @@ public class StackCalculator {
 
     public void run() {
         try {
-            String contextCommand;
+            String commandWithArgs;
             Command command;
             List<String> arguments;
-            while ((contextCommand = bufferedReader.readLine()) != null) {
-                arguments = List.of(contextCommand.split(" "));
+            while ((commandWithArgs = bufferedReader.readLine()) != null) {
+                if (commandWithArgs.equals("")) {
+                    break;
+                }
+                arguments = List.of(commandWithArgs.split(" "));
                 command = factory.getCommand(arguments.get(0));
                 command.execute(context, arguments);
             }
         } catch (IOException | InvocationTargetException | NoSuchMethodException | InstantiationException |
-                 IllegalAccessException e) {
+                 IllegalAccessException | NullPointerException e) {
             System.out.println(e.getMessage());
         }
     }
-    //public Optional<Double> exec
 }

@@ -16,8 +16,8 @@ public class CommandFactory {
 
     CommandFactory() {
         try {
-            Class<?> myClass = Class.forName("ru.nsu.fit.neltanov.calculator.CommandFactory");
-            InputStream inputStream = myClass.getResourceAsStream("commandNames.txt");
+            Class<?> myClass = Class.forName(CommandFactory.class.getName());
+            InputStream inputStream = myClass.getResourceAsStream("commandFactoryConfig.txt");
             if (inputStream == null) {
                 throw new NullPointerException();
             }
