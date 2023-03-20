@@ -4,15 +4,15 @@ import ru.nsu.fit.neltanov.calculator.commands.Command;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
+import java.util.List;
 
 public class StackCalculator {
     private final ExecutionContext context = new ExecutionContext();
     private final CommandFactory factory = new CommandFactory();
-
+    private BufferedReader bufferedReader;
     public StackCalculator() {
         InputStreamReader inputStreamReader = new InputStreamReader(System.in);
-        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-        executeCommands(bufferedReader);
+        bufferedReader = new BufferedReader(inputStreamReader);
     }
 
     public StackCalculator(String commandPath) {
@@ -21,8 +21,7 @@ public class StackCalculator {
             InputStream inputStream = myClass.getResourceAsStream(commandPath);
             if (inputStream != null) {
                 InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                executeCommands(bufferedReader);
+                bufferedReader = new BufferedReader(inputStreamReader);
             } else {
                 throw new NullPointerException();
             }
@@ -31,17 +30,15 @@ public class StackCalculator {
         }
     }
 
-    public void executeCommands(BufferedReader bufferedReader) {
+    public void run() {
         try {
             String contextCommand;
             Command command;
+            List<String> arguments;
             while ((contextCommand = bufferedReader.readLine()) != null) {
-                if (contextCommand.equals("")) {
-                    break;
-                }
-                context.setContextCommand(contextCommand);
-                command = factory.getCommand(context.getCommandName());
-                command.execute(context);
+                arguments = List.of(contextCommand.split(" "));
+                command = factory.getCommand(arguments.get(0));
+                command.execute(context, arguments);
             }
         } catch (IOException | InvocationTargetException | NoSuchMethodException | InstantiationException |
                  IllegalAccessException e) {

@@ -9,5 +9,6 @@ public class Main {
         else {
             calculator = new StackCalculator();
         }
+        calculator.run();
     }
 }

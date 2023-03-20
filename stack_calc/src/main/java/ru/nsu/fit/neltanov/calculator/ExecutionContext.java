@@ -5,7 +5,6 @@ import java.util.*;
 public class ExecutionContext {
     private final Stack<Double> stack = new Stack<>();
     private final Map<String, Double> parameters = new HashMap<>();
-    private List<String> command = new ArrayList<>();
 
     public Double popNumberFromStack() {
         return stack.pop();
@@ -39,17 +38,5 @@ public class ExecutionContext {
                NullPointerException | IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
-    }
-
-    public void setContextCommand(String command) {
-        this.command = List.of(command.split(" "));
-    }
-
-    public String getCommandName() {
-        return command.get(0);
-    }
-
-    public List<String> getCommandArguments() {
-        return command;
     }
 }

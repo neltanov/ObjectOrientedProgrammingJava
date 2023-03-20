@@ -6,10 +6,9 @@ import java.util.List;
 
 public class Comment implements Command {
     @Override
-    public void execute(ExecutionContext context) {
-        List<String> commandArguments = context.getCommandArguments();
-        for (String commandArgument : commandArguments) {
-            System.out.print(commandArgument + " ");
+    public void execute(ExecutionContext context, List<String> arguments) {
+        for (String argument : arguments) {
+            System.out.print(argument + " ");
         }
         System.out.println("\n");
     }
