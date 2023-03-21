@@ -3,6 +3,7 @@ package ru.nsu.fit.neltanov.calculator.commands;
 import ru.nsu.fit.neltanov.calculator.ExecutionContext;
 import ru.nsu.fit.neltanov.calculator.exceptions.InvalidCountOfArithmeticArgumentsException;
 
+import java.util.EmptyStackException;
 import java.util.List;
 
 public class Print implements Command {
@@ -15,6 +16,8 @@ public class Print implements Command {
             System.out.println("Current value on top of the stack: " + context.getNumberFromStack());
         } catch (InvalidCountOfArithmeticArgumentsException e) {
             System.out.println(e.getMessage());
+        } catch (EmptyStackException e) {
+            System.out.println("Stack is empty");
         }
     }
 }

@@ -18,6 +18,16 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
+    useJUnitPlatform() {
+        includeTags("fast", "smoke & feature-a")
+        // excludeTags("slow", "ci")
+        includeEngines("junit-jupiter")
+        // excludeEngines("junit-vintage")
+    }
+    systemProperty("junit.jupiter.conditions.deactivate", "*")
+    systemProperty("junit.jupiter.extensions.autodetection.enabled", true)
+    systemProperty("junit.jupiter.testinstance.lifecycle.default", "per_class")
+    // for logging
+    systemProperty("java.util.logging.manager", "org.apache.logging.log4j.jul.LogManager")
 }
 

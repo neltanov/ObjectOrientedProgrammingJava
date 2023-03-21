@@ -9,28 +9,27 @@ import java.util.List;
 public class StackCalculator {
     private final ExecutionContext context = new ExecutionContext();
     private final CommandFactory factory = new CommandFactory();
-    private BufferedReader bufferedReader;
+    private InputStream inputStream;
+
     public StackCalculator() {
-        InputStreamReader inputStreamReader = new InputStreamReader(System.in);
-        bufferedReader = new BufferedReader(inputStreamReader);
+        inputStream = System.in;
     }
 
     public StackCalculator(String commandPath) {
         try {
-            Class<?> myClass = Class.forName("ru.nsu.fit.neltanov.calculator.Main");
+            Class<?> myClass = Class.forName(StackCalculator.class.getName());
             InputStream inputStream = myClass.getResourceAsStream(commandPath);
             if (inputStream == null) {
                 throw new NullPointerException();
             }
-            InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-            bufferedReader = new BufferedReader(inputStreamReader);
         } catch (ClassNotFoundException | NullPointerException e) {
             System.out.println(e.getMessage());
         }
     }
 
     public void run() {
-        try {
+        try (InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+             BufferedReader bufferedReader = new BufferedReader(inputStreamReader)) {
             String commandWithArgs;
             Command command;
             List<String> arguments;
@@ -43,8 +42,10 @@ public class StackCalculator {
                 command.execute(context, arguments);
             }
         } catch (IOException | InvocationTargetException | NoSuchMethodException | InstantiationException |
-                 IllegalAccessException | NullPointerException e) {
+                 IllegalAccessException e) {
             System.out.println(e.getMessage());
+        } catch (NullPointerException e) {
+            System.out.println("This command doesn't exist");
         }
     }
 }

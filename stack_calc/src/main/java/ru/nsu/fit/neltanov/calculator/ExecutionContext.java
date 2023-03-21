@@ -10,15 +10,10 @@ public class ExecutionContext {
         return stack.pop();
     }
 
-    public Double getNumberFromStack() {
-        Double stackNumber = null;
-        try {
-            stackNumber = stack.pop();
-            stack.push(stackNumber);
-        }
-        catch (EmptyStackException e) {
-            System.out.println(e.getMessage());
-        }
+    public Double getNumberFromStack() throws EmptyStackException{
+        Double stackNumber;
+        stackNumber = stack.pop();
+        stack.push(stackNumber);
         return stackNumber;
     }
 
