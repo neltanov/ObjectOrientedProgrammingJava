@@ -8,20 +8,13 @@ import java.util.List;
 
 public class Multiply implements Command {
     @Override
-    public void execute(ExecutionContext context, List<String> arguments) {
-        try {
-            if (arguments.size() != 1) {
-                throw new InvalidCountOfArithmeticArgumentsException();
-            }
-            Double a = context.popNumberFromStack();
-            Double b = context.popNumberFromStack();
-            context.pushNumberToStack(a * b);
+    public void execute(ExecutionContext context, List<String> arguments)
+            throws InvalidCountOfArithmeticArgumentsException, EmptyStackException {
+        if (arguments.size() != 1) {
+            throw new InvalidCountOfArithmeticArgumentsException();
         }
-        catch (EmptyStackException e) {
-            System.out.println(e.getMessage());
-        } catch (InvalidCountOfArithmeticArgumentsException e) {
-            System.out.println(e.getMessage());
-        }
-
+        Double a = context.popNumberFromStack();
+        Double b = context.popNumberFromStack();
+        context.pushNumberToStack(a * b);
     }
 }

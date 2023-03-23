@@ -6,6 +6,8 @@
  */
 plugins {
     id 'java'
+    id 'application'
+    id 'jacoco'
 }
 
 repositories {
@@ -13,21 +15,24 @@ repositories {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:1.7.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    testImplementation "org.mockito:mockito-core:3.+"
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
 }
 
 test {
-    useJUnitPlatform() {
-        includeTags("fast", "smoke & feature-a")
-        // excludeTags("slow", "ci")
-        includeEngines("junit-jupiter")
-        // excludeEngines("junit-vintage")
+    useJUnitPlatform()
+    systemProperty("java.util.logging.manager", "org.apache.logging.log4j.jul.LogManager") // for logging
+    dependsOn cleanTest
+    testLogging.showStandardStreams = true
+    finalizedBy jacocoTestReport // report is always generated after tests run
+}
+
+jacocoTestReport {
+    dependsOn test // tests are required to run before generating the report
+    reports {
+        xml.required = true
+        html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
     }
-    systemProperty("junit.jupiter.conditions.deactivate", "*")
-    systemProperty("junit.jupiter.extensions.autodetection.enabled", true)
-    systemProperty("junit.jupiter.testinstance.lifecycle.default", "per_class")
-    // for logging
-    systemProperty("java.util.logging.manager", "org.apache.logging.log4j.jul.LogManager")
 }
 

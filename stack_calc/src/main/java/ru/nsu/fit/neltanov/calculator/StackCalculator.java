@@ -1,9 +1,11 @@
 package ru.nsu.fit.neltanov.calculator;
 
 import ru.nsu.fit.neltanov.calculator.commands.Command;
+import ru.nsu.fit.neltanov.calculator.exceptions.InvalidCountOfArgumentsException;
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
+import java.util.EmptyStackException;
 import java.util.List;
 
 public class StackCalculator {
@@ -15,15 +17,11 @@ public class StackCalculator {
         inputStream = System.in;
     }
 
-    public StackCalculator(String commandPath) {
-        try {
-            Class<?> myClass = Class.forName(StackCalculator.class.getName());
-            InputStream inputStream = myClass.getResourceAsStream(commandPath);
-            if (inputStream == null) {
-                throw new NullPointerException();
-            }
-        } catch (ClassNotFoundException | NullPointerException e) {
-            System.out.println(e.getMessage());
+    public StackCalculator(String commandPath) throws ClassNotFoundException, NullPointerException {
+        Class<?> myClass = Class.forName(StackCalculator.class.getName());
+        InputStream inputStream = myClass.getResourceAsStream(commandPath);
+        if (inputStream == null) {
+            throw new NullPointerException();
         }
     }
 
@@ -34,18 +32,29 @@ public class StackCalculator {
             Command command;
             List<String> arguments;
             while ((commandWithArgs = bufferedReader.readLine()) != null) {
-                if (commandWithArgs.equals("")) {
-                    break;
+                try {
+                    if (commandWithArgs.equals("")) {
+                        break;
+                    }
+                    arguments = List.of(commandWithArgs.split(" "));
+                    if ((command = factory.getCommand(arguments.get(0))) != null) {
+                        command.execute(context, arguments);
+                    }
+                } catch (InvocationTargetException | NoSuchMethodException | InstantiationException |
+                         IllegalAccessException e) {
+                    System.out.println(e.getMessage());
+                } catch (InvalidCountOfArgumentsException e) {
+                    System.out.println(e.getMessage());
+                } catch (EmptyStackException e) {
+                    System.out.println("Stack is empty");
+                } catch (NumberFormatException e) {
+                    System.out.println(e.getMessage() + ": this symbol cannot define parameter");
+                } catch (ArithmeticException e) {
+                    System.out.println("The number must be positive!");
                 }
-                arguments = List.of(commandWithArgs.split(" "));
-                command = factory.getCommand(arguments.get(0));
-                command.execute(context, arguments);
             }
-        } catch (IOException | InvocationTargetException | NoSuchMethodException | InstantiationException |
-                 IllegalAccessException e) {
+        } catch (IOException e) {
             System.out.println(e.getMessage());
-        } catch (NullPointerException e) {
-            System.out.println("This command doesn't exist");
         }
     }
 }

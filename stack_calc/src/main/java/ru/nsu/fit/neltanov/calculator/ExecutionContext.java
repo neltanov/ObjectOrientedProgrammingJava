@@ -6,13 +6,12 @@ public class ExecutionContext {
     private final Stack<Double> stack = new Stack<>();
     private final Map<String, Double> parameters = new HashMap<>();
 
-    public Double popNumberFromStack() {
+    public Double popNumberFromStack() throws EmptyStackException {
         return stack.pop();
     }
 
-    public Double getNumberFromStack() throws EmptyStackException{
-        Double stackNumber;
-        stackNumber = stack.pop();
+    public Double getNumberFromStack() throws EmptyStackException {
+        Double stackNumber = stack.pop();
         stack.push(stackNumber);
         return stackNumber;
     }

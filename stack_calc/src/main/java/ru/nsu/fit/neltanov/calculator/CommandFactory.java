@@ -39,7 +39,13 @@ public class CommandFactory {
 
     public Command getCommand(String commandName) throws NullPointerException, NoSuchMethodException, InvocationTargetException,
             InstantiationException, IllegalAccessException {
-        Class<?> commandMetaInfo = Objects.requireNonNull(commands.get(commandName));
-        return (Command) commandMetaInfo.getDeclaredConstructor().newInstance();
+        Command command = null;
+        try {
+            Class<?> commandMetaInfo = Objects.requireNonNull(commands.get(commandName));
+            command = (Command) commandMetaInfo.getDeclaredConstructor().newInstance();
+        } catch (NullPointerException e) {
+            System.out.println("This command doesn't exist. ");
+        }
+        return command;
     }
 }
