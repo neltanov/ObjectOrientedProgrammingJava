@@ -10,7 +10,7 @@ public class Print implements Command {
     @Override
     public void execute(ExecutionContext context, List<String> arguments)
             throws InvalidCountOfArithmeticArgumentsException, EmptyStackException {
-        if (arguments.size() != 1) {
+        if (arguments.size() != 0) {
             throw new InvalidCountOfArithmeticArgumentsException();
         }
         System.out.println("Current value on top of the stack: " + context.getNumberFromStack());

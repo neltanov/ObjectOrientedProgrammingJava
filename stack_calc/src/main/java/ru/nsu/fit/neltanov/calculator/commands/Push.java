@@ -9,15 +9,15 @@ public class Push implements Command {
     @Override
     public void execute(ExecutionContext context, List<String> arguments)
             throws InvalidCountOfOneArgumentException, NumberFormatException {
-        if (arguments.size() != 2) {
+        if (arguments.size() != 1) {
             throw new InvalidCountOfOneArgumentException();
         }
-        String pushValue = arguments.get(1);
+        String pushValue = arguments.get(0);
         Double value;
         if ((value = context.getParameterValue(pushValue)) != null) {
             context.pushNumberToStack(value);
         } else {
-            context.pushNumberToStack(Double.valueOf(arguments.get(1)));
+            context.pushNumberToStack(Double.valueOf(pushValue));
         }
     }
 }

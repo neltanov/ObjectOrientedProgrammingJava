@@ -10,14 +10,14 @@ public class Define implements Command {
     @Override
     public void execute(ExecutionContext context, List<String> arguments)
             throws NumberFormatException, InvalidCountOfDefineArgumentsException, InvalidParameterDefinitionException {
-        if (arguments.size() != 3) {
+        if (arguments.size() != 2) {
             throw new InvalidCountOfDefineArgumentsException();
         }
 
-        if (Character.isDigit(arguments.get(1).charAt(0))) {
+        if (Character.isDigit(arguments.get(0).charAt(0))) {
             throw new InvalidParameterDefinitionException();
         }
 
-        context.setParameterValue(arguments.get(1), Double.valueOf(arguments.get(2)));
+        context.setParameterValue(arguments.get(0), Double.valueOf(arguments.get(1)));
     }
 }

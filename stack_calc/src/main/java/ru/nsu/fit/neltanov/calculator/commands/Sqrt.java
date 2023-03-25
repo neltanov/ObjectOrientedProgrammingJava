@@ -10,7 +10,7 @@ public class Sqrt implements Command {
     @Override
     public void execute(ExecutionContext context, List<String> arguments)
             throws InvalidCountOfArithmeticArgumentsException, EmptyStackException, ArithmeticException {
-        if (arguments.size() != 1) {
+        if (arguments.size() != 0) {
             throw new InvalidCountOfArithmeticArgumentsException();
         }
         Double a = context.popNumberFromStack();

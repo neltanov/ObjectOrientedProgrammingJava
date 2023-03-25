@@ -20,9 +20,9 @@ public class TestCalculator {
         Push command = new Push();
 
         assertThrows(InvalidCountOfOneArgumentException.class,
-                () -> command.execute(context, List.of("PUSH")));
+                () -> command.execute(context, List.of()));
 
-        command.execute(context, List.of("PUSH", "3"));
+        command.execute(context, List.of("3"));
         assertEquals(3, context.getNumberFromStack());
     }
 
@@ -32,13 +32,13 @@ public class TestCalculator {
         Pop command = new Pop();
 
         assertThrows(InvalidCountOfArithmeticArgumentsException.class,
-                () -> command.execute(context, List.of("POP", "")));
+                () -> command.execute(context, List.of("")));
 
         assertThrows(EmptyStackException.class,
-                () -> command.execute(context, List.of("POP")));
+                () -> command.execute(context, List.of()));
 
         context.pushNumberToStack(4.0);
-        command.execute(context, List.of("POP"));
+        command.execute(context, List.of());
 
     }
 
@@ -48,12 +48,12 @@ public class TestCalculator {
         Define command = new Define();
 
         assertThrows(NumberFormatException.class,
-                () -> command.execute(context, List.of("DEFINE", "b", "g")));
+                () -> command.execute(context, List.of("b", "g")));
 
         assertThrows(InvalidCountOfDefineArgumentsException.class,
-                () -> command.execute(context, List.of("DEFINE", "")));
+                () -> command.execute(context, List.of()));
 
-        command.execute(context, List.of("DEFINE", "a", "12"));
+        command.execute(context, List.of("a", "12"));
         assertEquals(12, context.getParameterValue("a"));
 
     }
@@ -64,10 +64,10 @@ public class TestCalculator {
         Sum command = new Sum();
 
         assertThrows(EmptyStackException.class,
-                () -> command.execute(context, List.of("+")));
+                () -> command.execute(context, List.of()));
 
         assertThrows(InvalidCountOfArithmeticArgumentsException.class,
-                () -> command.execute(context, List.of("+", "")));
+                () -> command.execute(context, List.of("")));
 
         Double firstOperand = 5.1;
         Double secondOperand = 10.4;
@@ -76,7 +76,7 @@ public class TestCalculator {
         context.pushNumberToStack(firstOperand);
         context.pushNumberToStack(secondOperand);
 
-        command.execute(context, List.of("+"));
+        command.execute(context, List.of());
 
         assertEquals(expectedResult, context.getNumberFromStack());
 
@@ -88,10 +88,10 @@ public class TestCalculator {
         Substract command = new Substract();
 
         assertThrows(EmptyStackException.class,
-                () -> command.execute(context, List.of("-")));
+                () -> command.execute(context, List.of()));
 
         assertThrows(InvalidCountOfArithmeticArgumentsException.class,
-                () -> command.execute(context, List.of("-", "")));
+                () -> command.execute(context, List.of("")));
 
         Double firstOperand = 5.1;
         Double secondOperand = 10.4;
@@ -100,7 +100,7 @@ public class TestCalculator {
         context.pushNumberToStack(firstOperand);
         context.pushNumberToStack(secondOperand);
 
-        command.execute(context, List.of("-"));
+        command.execute(context, List.of());
 
         assertEquals(expectedResult, context.getNumberFromStack());
 
@@ -112,10 +112,10 @@ public class TestCalculator {
         Multiply command = new Multiply();
 
         assertThrows(EmptyStackException.class,
-                () -> command.execute(context, List.of("*")));
+                () -> command.execute(context, List.of()));
 
         assertThrows(InvalidCountOfArithmeticArgumentsException.class,
-                () -> command.execute(context, List.of("*", "")));
+                () -> command.execute(context, List.of("")));
 
         Double firstOperand = 5.1;
         Double secondOperand = 10.4;
@@ -125,10 +125,9 @@ public class TestCalculator {
         context.pushNumberToStack(secondOperand);
 
 
-        command.execute(context, List.of("*"));
+        command.execute(context, List.of());
 
         assertEquals(expectedResult, context.getNumberFromStack());
-
     }
 
     @Test
@@ -137,10 +136,10 @@ public class TestCalculator {
         Divide command = new Divide();
 
         assertThrows(EmptyStackException.class,
-                () -> command.execute(context, List.of("/")));
+                () -> command.execute(context, List.of()));
 
         assertThrows(InvalidCountOfArithmeticArgumentsException.class,
-                () -> command.execute(context, List.of("/", "")));
+                () -> command.execute(context, List.of("")));
 
         Double firstOperand = 5.1;
         Double secondOperand = 10.4;
@@ -149,7 +148,7 @@ public class TestCalculator {
         context.pushNumberToStack(firstOperand);
         context.pushNumberToStack(secondOperand);
 
-        command.execute(context, List.of("/"));
+        command.execute(context, List.of());
 
         assertEquals(expectedResult, context.getNumberFromStack());
 
@@ -158,7 +157,7 @@ public class TestCalculator {
         context.pushNumberToStack(firstOperand);
         context.pushNumberToStack(secondOperand);
         assertThrows(ArithmeticException.class,
-                () -> command.execute(context, List.of("/")));
+                () -> command.execute(context, List.of()));
 
     }
 
@@ -168,24 +167,24 @@ public class TestCalculator {
         Sqrt command = new Sqrt();
 
         assertThrows(EmptyStackException.class,
-                () -> command.execute(context, List.of("SQRT")));
+                () -> command.execute(context, List.of()));
 
         assertThrows(InvalidCountOfArithmeticArgumentsException.class,
-                () -> command.execute(context, List.of("SQRT", "")));
+                () -> command.execute(context, List.of("")));
 
         double operand = 5.1;
         Double expectedResult = Math.sqrt(operand);
 
         context.pushNumberToStack(operand);
 
-        command.execute(context, List.of("SQRT"));
+        command.execute(context, List.of());
 
         assertEquals(expectedResult, context.getNumberFromStack());
 
         operand = -1;
         context.pushNumberToStack(operand);
         assertThrows(ArithmeticException.class,
-                () -> command.execute(context, List.of("SQRT")));
+                () -> command.execute(context, List.of()));
 
     }
 
@@ -195,10 +194,12 @@ public class TestCalculator {
         Print command = new Print();
 
         assertThrows(EmptyStackException.class,
-                () -> command.execute(context, List.of("PRINT")));
+                () -> command.execute(context, List.of()));
 
         assertThrows(InvalidCountOfArithmeticArgumentsException.class,
-                () -> command.execute(context, List.of("PRINT", "")));
+                () -> command.execute(context, List.of("")));
+
+
     }
 
 }

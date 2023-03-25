@@ -5,6 +5,7 @@ import ru.nsu.fit.neltanov.calculator.exceptions.InvalidCountOfArgumentsExceptio
 
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
 import java.util.EmptyStackException;
 import java.util.List;
 
@@ -31,13 +32,20 @@ public class StackCalculator {
             String commandWithArgs;
             Command command;
             List<String> arguments;
+            String commandName;
+            String[] commandWithArgsArray;
+            String[] argumentsArray;
             while ((commandWithArgs = bufferedReader.readLine()) != null) {
                 try {
                     if (commandWithArgs.equals("")) {
                         break;
                     }
-                    arguments = List.of(commandWithArgs.split(" "));
-                    if ((command = factory.getCommand(arguments.get(0))) != null) {
+                    commandWithArgsArray = commandWithArgs.split(" ");
+                    argumentsArray = Arrays.copyOfRange(commandWithArgsArray, 1, commandWithArgsArray.length);
+
+                    commandName = commandWithArgsArray[0];
+                    arguments = List.of(argumentsArray);
+                    if ((command = factory.getCommand(commandName)) != null) {
                         command.execute(context, arguments);
                     }
                 } catch (InvocationTargetException | NoSuchMethodException | InstantiationException |

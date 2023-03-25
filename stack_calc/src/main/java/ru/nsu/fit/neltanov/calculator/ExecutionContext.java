@@ -11,9 +11,7 @@ public class ExecutionContext {
     }
 
     public Double getNumberFromStack() throws EmptyStackException {
-        Double stackNumber = stack.pop();
-        stack.push(stackNumber);
-        return stackNumber;
+        return stack.peek();
     }
 
     public void pushNumberToStack(Double number) {
