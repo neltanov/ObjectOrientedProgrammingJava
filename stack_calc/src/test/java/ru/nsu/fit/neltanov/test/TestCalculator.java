@@ -189,4 +189,16 @@ public class TestCalculator {
 
     }
 
+    @Test
+    public void testPrintCommand() {
+        ExecutionContext context = new ExecutionContext();
+        Print command = new Print();
+
+        assertThrows(EmptyStackException.class,
+                () -> command.execute(context, List.of("PRINT")));
+
+        assertThrows(InvalidCountOfArithmeticArgumentsException.class,
+                () -> command.execute(context, List.of("PRINT", "")));
+    }
+
 }
