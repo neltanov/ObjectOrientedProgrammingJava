@@ -19,11 +19,13 @@ dependencies {
     testImplementation "org.mockito:mockito-core:3.+"
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
     testImplementation 'junit:junit:4.13.2'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.17.2'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.17.2'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.17.2'
 }
 
 test {
     useJUnitPlatform()
-    systemProperty("java.util.logging.manager", "org.apache.logging.log4j.jul.LogManager") // for logging
     dependsOn cleanTest
     testLogging.showStandardStreams = true
     finalizedBy jacocoTestReport // report is always generated after tests run

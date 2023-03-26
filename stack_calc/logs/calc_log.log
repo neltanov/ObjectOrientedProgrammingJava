@@ -1,0 +1,35 @@
+2023-03-27 00:45:07.742 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.txt
+2023-03-27 00:45:07.744 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:36)] - Initializing input stream from file is succeed
+2023-03-27 00:45:07.745 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-03-27 00:45:07.745 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-03-27 00:45:07.745 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Define@45ca843 with arguments: [a, 4]
+2023-03-27 00:45:07.746 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Define@757acd7b with arguments: [b, 2]
+2023-03-27 00:45:07.746 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@36b4fe2a with arguments: [b]
+2023-03-27 00:45:07.746 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Comment@574b560f with arguments: [It, is, a, comment]
+2023-03-27 00:45:07.747 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@ba54932 with arguments: [a]
+2023-03-27 00:45:07.747 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sum@28975c28 with arguments: []
+2023-03-27 00:45:07.747 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@3943a2be with arguments: []
+2023-03-27 00:49:57.224 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
+2023-03-27 00:49:57.228 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.txt
+2023-03-27 00:49:57.228 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:36)] - Initializing input stream from file is succeed
+2023-03-27 00:49:57.228 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-03-27 00:49:57.229 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-03-27 00:49:57.229 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Define@45ca843 with arguments: [a, 4]
+2023-03-27 00:49:57.229 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Define@757acd7b with arguments: [b, 2]
+2023-03-27 00:49:57.230 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@36b4fe2a with arguments: [b]
+2023-03-27 00:49:57.230 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Comment@574b560f with arguments: [It, is, a, comment]
+2023-03-27 00:49:57.230 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@ba54932 with arguments: [a]
+2023-03-27 00:49:57.230 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sum@28975c28 with arguments: []
+2023-03-27 00:49:57.230 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@3943a2be with arguments: []
+2023-03-27 01:14:17.881 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
+2023-03-27 01:14:17.885 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.txt
+2023-03-27 01:14:17.885 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:36)] - Initializing input stream from file is succeed
+2023-03-27 01:14:17.886 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-03-27 01:14:17.886 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-03-27 01:14:17.886 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Define@45ca843 with arguments: [a, 4]
+2023-03-27 01:14:17.887 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Define@757acd7b with arguments: [b, 2]
+2023-03-27 01:14:17.887 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@36b4fe2a with arguments: [b]
+2023-03-27 01:14:17.887 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Comment@574b560f with arguments: [It, is, a, comment]
+2023-03-27 01:14:17.888 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@ba54932 with arguments: [a]
+2023-03-27 01:14:17.888 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sum@28975c28 with arguments: []
+2023-03-27 01:14:17.888 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@3943a2be with arguments: []
