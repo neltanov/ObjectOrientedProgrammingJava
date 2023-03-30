@@ -1,0 +1,7 @@
+DEFINE a 7
+DEFINE b 2
+PUSH b
+# It is a comment
+PUSH a
++
+PRINT

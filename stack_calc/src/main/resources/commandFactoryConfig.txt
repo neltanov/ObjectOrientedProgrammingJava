@@ -1,0 +1,10 @@
+# ru.nsu.fit.neltanov.calculator.commands.Comment
+POP ru.nsu.fit.neltanov.calculator.commands.Pop
+PUSH ru.nsu.fit.neltanov.calculator.commands.Push
++ ru.nsu.fit.neltanov.calculator.commands.Sum
+- ru.nsu.fit.neltanov.calculator.commands.Substract
+* ru.nsu.fit.neltanov.calculator.commands.Multiply
+/ ru.nsu.fit.neltanov.calculator.commands.Divide
+SQRT ru.nsu.fit.neltanov.calculator.commands.Sqrt
+PRINT ru.nsu.fit.neltanov.calculator.commands.Print
+DEFINE ru.nsu.fit.neltanov.calculator.commands.Define
