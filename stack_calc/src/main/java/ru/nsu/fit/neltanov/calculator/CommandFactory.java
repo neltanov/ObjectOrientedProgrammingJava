@@ -24,7 +24,7 @@ public class CommandFactory {
             Class<?> myClass = Class.forName(CommandFactory.class.getName());
             InputStream inputStream = myClass.getResourceAsStream(configFile);
             if (inputStream == null) {
-                logger.error("Configuring file were not found");
+                logger.error("Configuring file '" + configFile + " was not found");
                 throw new NullPointerException();
             }
             try (InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
@@ -39,7 +39,9 @@ public class CommandFactory {
                     commands.put(commandName, command);
                 }
             }
+            logger.info("Configuring command factory with file " + configFile + " is done");
         } catch (ClassNotFoundException | NullPointerException | IOException e) {
+            logger.warn("Cannot configuring factory with file '" + configFile);
             System.out.println(e.getMessage());
         }
     }
@@ -51,7 +53,8 @@ public class CommandFactory {
             Class<?> commandMetaInfo = Objects.requireNonNull(commands.get(commandName));
             command = (Command) commandMetaInfo.getDeclaredConstructor().newInstance();
         } catch (NullPointerException e) {
-            System.out.println("This command doesn't exist. ");
+            logger.warn("Command '" + commandName + "' doesn't exist", e);
+            System.out.println("Command '" + commandName + "'  doesn't exist. ");
         }
         return command;
     }

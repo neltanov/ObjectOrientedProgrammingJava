@@ -1,7 +1,0 @@
-DEFINE a 4
-DEFINE b 2
-PUSH b
-# It is a comment
-PUSH a
-+
-PRINT
