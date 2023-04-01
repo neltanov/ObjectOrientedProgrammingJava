@@ -4,13 +4,15 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Objects;
 import ru.nsu.fit.neltanov.minesweeper.sweeper.Box;
+import ru.nsu.fit.neltanov.minesweeper.sweeper.Coord;
+import ru.nsu.fit.neltanov.minesweeper.sweeper.Ranges;
 
 public class Minesweeper extends JFrame {
 
     private JPanel panel;
 
-    private final int COLS = 15;
-    private final int ROWS = 2;
+    private final int COLS = 9;
+    private final int ROWS = 9;
     private final int IMG_SIZE = 50;
 
     public static void main(String[] args) {
@@ -18,6 +20,7 @@ public class Minesweeper extends JFrame {
     }
 
     private Minesweeper() {
+        Ranges.setSize(new Coord(COLS, ROWS));
         setImages();
         initPanel();
         initFrame();
@@ -28,12 +31,12 @@ public class Minesweeper extends JFrame {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                for (Box box : Box.values()) {
-                    g.drawImage((Image) box.image, box.ordinal() * IMG_SIZE, 0, this);
+                for (Coord coord : Ranges.getAllCoords()) {
+                    g.drawImage((Image) Box.BOMB.image, coord.x * IMG_SIZE, coord.y * IMG_SIZE, this);
                 }
             }
         };
-        setPreferredSize(new Dimension(COLS * IMG_SIZE, ROWS * IMG_SIZE));
+        setPreferredSize(new Dimension(Ranges.getSize().x * IMG_SIZE, Ranges.getSize().y * IMG_SIZE));
         add(panel);
     }
 
