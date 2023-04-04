@@ -11,7 +11,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
@@ -39,12 +38,9 @@ public class CommandFactory {
                         matching = line.split(" ");
                         commandName = matching[0];
                         command = Class.forName(matching[1]);
-                        String packageName = command.getPackageName();
-                        String commandPackageName = Command.class.getPackageName();
-                        if (!packageName.equals(commandPackageName)) {
-                            throw new InvalidCommandException(command.getName(), configFile);
+                        if (!Command.class.isAssignableFrom(command)) {
+                            throw new InvalidCommandException(command.getName() ,configFile);
                         }
-                        command.getMethod("execute", ExecutionContext.class, List.class);
                         commands.put(commandName, command);
                     } catch (ClassNotFoundException e) {
                         System.out.println("Class '" + e.getMessage() + "' from configuring file '"
@@ -52,11 +48,6 @@ public class CommandFactory {
                     } catch (InvalidCommandException e) {
                         logger.warn(e.getMessage());
                         System.out.println(e.getMessage());
-                    } catch (NoSuchMethodException e) {
-                        logger.warn("Method '" + e.getMessage() +
-                                "' was not found in command class.\nSo command is not calculator command");
-                        System.out.println("Method '" + e.getMessage() +
-                                "' was not found in command class.\nSo command is not calculator command");
                     }
                 }
             }
@@ -75,7 +66,7 @@ public class CommandFactory {
             command = (Command) commandMetaInfo.getDeclaredConstructor().newInstance();
         } catch (NullPointerException e) {
             logger.warn("Command '" + commandName + "' doesn't exist", e);
-            System.out.println("Command '" + commandName + "'  doesn't exist. ");
+            System.out.println("Command '" + commandName + "' doesn't exist. ");
         }
         return command;
     }
