@@ -3,6 +3,7 @@ package ru.nsu.fit.neltanov.calculator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ru.nsu.fit.neltanov.calculator.commands.Command;
+import ru.nsu.fit.neltanov.calculator.exceptions.InvalidCommandException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,6 +11,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
@@ -33,16 +35,35 @@ public class CommandFactory {
                 String[] matching;
                 Class<?> command;
                 while ((line = bufferedReader.readLine()) != null) {
-                    matching = line.split(" ");
-                    commandName = matching[0];
-                    command = Class.forName(matching[1]);
-                    commands.put(commandName, command);
+                    try {
+                        matching = line.split(" ");
+                        commandName = matching[0];
+                        command = Class.forName(matching[1]);
+                        String packageName = command.getPackageName();
+                        String commandPackageName = Command.class.getPackageName();
+                        if (!packageName.equals(commandPackageName)) {
+                            throw new InvalidCommandException(command.getName(), configFile);
+                        }
+                        command.getMethod("execute", ExecutionContext.class, List.class);
+                        commands.put(commandName, command);
+                    } catch (ClassNotFoundException e) {
+                        System.out.println("Class '" + e.getMessage() + "' from configuring file '"
+                                + configFile + "' doesn't exist");
+                    } catch (InvalidCommandException e) {
+                        logger.warn(e.getMessage());
+                        System.out.println(e.getMessage());
+                    } catch (NoSuchMethodException e) {
+                        logger.warn("Method '" + e.getMessage() +
+                                "' was not found in command class.\nSo command is not calculator command");
+                        System.out.println("Method '" + e.getMessage() +
+                                "' was not found in command class.\nSo command is not calculator command");
+                    }
                 }
             }
             logger.info("Configuring command factory with file " + configFile + " is done");
         } catch (ClassNotFoundException | NullPointerException | IOException e) {
-            logger.warn("Cannot configuring factory with file '" + configFile);
-            System.out.println(e.getMessage());
+            logger.warn("Cannot configuring factory with file '" + configFile + "'");
+            System.out.println("Cannot configuring factory with file '" + configFile + "'");
         }
     }
 
