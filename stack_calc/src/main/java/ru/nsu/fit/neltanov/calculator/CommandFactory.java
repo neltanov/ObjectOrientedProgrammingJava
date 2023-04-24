@@ -3,6 +3,7 @@ package ru.nsu.fit.neltanov.calculator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import ru.nsu.fit.neltanov.calculator.commands.Command;
+import ru.nsu.fit.neltanov.calculator.exceptions.InvalidCommandException;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -33,16 +34,27 @@ public class CommandFactory {
                 String[] matching;
                 Class<?> command;
                 while ((line = bufferedReader.readLine()) != null) {
-                    matching = line.split(" ");
-                    commandName = matching[0];
-                    command = Class.forName(matching[1]);
-                    commands.put(commandName, command);
+                    try {
+                        matching = line.split(" ");
+                        commandName = matching[0];
+                        command = Class.forName(matching[1]);
+                        if (!Command.class.isAssignableFrom(command)) {
+                            throw new InvalidCommandException(command.getName() ,configFile);
+                        }
+                        commands.put(commandName, command);
+                    } catch (ClassNotFoundException e) {
+                        System.out.println("Class '" + e.getMessage() + "' from configuring file '"
+                                + configFile + "' doesn't exist");
+                    } catch (InvalidCommandException e) {
+                        logger.warn(e.getMessage());
+                        System.out.println(e.getMessage());
+                    }
                 }
             }
             logger.info("Configuring command factory with file " + configFile + " is done");
         } catch (ClassNotFoundException | NullPointerException | IOException e) {
-            logger.warn("Cannot configuring factory with file '" + configFile);
-            System.out.println(e.getMessage());
+            logger.warn("Cannot configuring factory with file '" + configFile + "'");
+            System.out.println("Cannot configuring factory with file '" + configFile + "'");
         }
     }
 
@@ -54,7 +66,7 @@ public class CommandFactory {
             command = (Command) commandMetaInfo.getDeclaredConstructor().newInstance();
         } catch (NullPointerException e) {
             logger.warn("Command '" + commandName + "' doesn't exist", e);
-            System.out.println("Command '" + commandName + "'  doesn't exist. ");
+            System.out.println("Command '" + commandName + "' doesn't exist. ");
         }
         return command;
     }

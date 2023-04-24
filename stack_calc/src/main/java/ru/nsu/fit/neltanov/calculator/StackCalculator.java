@@ -79,9 +79,8 @@ public class StackCalculator {
                             "Invalid parameter value entered", e);
                     System.out.println(e.getMessage() + ": this symbol cannot define parameter");
                 } catch (ArithmeticException e) {
-                    logger.warn("Division by zero or taking the square root " +
-                            "of a negative number was performed", e);
-                    System.out.println("The number must be positive!");
+                    logger.warn(e.getMessage(), e);
+                    System.out.println(e.getMessage());
                 }
             }
         } catch (IOException e) {

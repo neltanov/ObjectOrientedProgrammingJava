@@ -1,7 +1,7 @@
 package ru.nsu.fit.neltanov.calculator.commands;
 
 import ru.nsu.fit.neltanov.calculator.ExecutionContext;
-import ru.nsu.fit.neltanov.calculator.exceptions.InvalidCountOfDefineArgumentsException;
+import ru.nsu.fit.neltanov.calculator.exceptions.InvalidCountOfArgumentsException;
 import ru.nsu.fit.neltanov.calculator.exceptions.InvalidParameterDefinitionException;
 
 import java.util.List;
@@ -9,9 +9,9 @@ import java.util.List;
 public class Define implements Command {
     @Override
     public void execute(ExecutionContext context, List<String> arguments)
-            throws NumberFormatException, InvalidCountOfDefineArgumentsException, InvalidParameterDefinitionException {
+            throws NumberFormatException, InvalidCountOfArgumentsException, InvalidParameterDefinitionException {
         if (arguments.size() != 2) {
-            throw new InvalidCountOfDefineArgumentsException();
+            throw new InvalidCountOfArgumentsException(2);
         }
 
         if (Character.isDigit(arguments.get(0).charAt(0))) {

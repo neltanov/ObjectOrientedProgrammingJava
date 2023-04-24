@@ -1,172 +1,31 @@
-2023-03-30 22:55:20.340 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 22:55:20.353 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.txt
-2023-03-30 22:55:20.354 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:36)] - Initializing input stream from file is succeed
-2023-03-30 22:55:20.354 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
-2023-03-30 22:55:20.354 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
-2023-03-30 22:55:20.354 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Define@1fb700ee with arguments: [a, 4]
-2023-03-30 22:55:20.355 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Define@4a668b6e with arguments: [b, 2]
-2023-03-30 22:55:20.355 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@5f683daf with arguments: [b]
-2023-03-30 22:55:20.355 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Comment@78ffe6dc with arguments: [It, is, a, comment]
-2023-03-30 22:55:20.355 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@8317c52 with arguments: [a]
-2023-03-30 22:55:20.356 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sum@76f2bbc1 with arguments: []
-2023-03-30 22:55:20.356 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@68e965f5 with arguments: []
-2023-03-30 22:55:55.788 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 22:55:55.792 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.txt
-2023-03-30 22:55:55.792 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:36)] - Initializing input stream from file is succeed
-2023-03-30 22:55:55.792 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
-2023-03-30 22:55:55.793 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
-2023-03-30 22:55:55.793 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Define@45ca843 with arguments: [a, 7]
-2023-03-30 22:55:55.793 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Define@757acd7b with arguments: [b, 2]
-2023-03-30 22:55:55.794 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@36b4fe2a with arguments: [b]
-2023-03-30 22:55:55.794 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Comment@574b560f with arguments: [It, is, a, comment]
-2023-03-30 22:55:55.794 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@ba54932 with arguments: [a]
-2023-03-30 22:55:55.794 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sum@28975c28 with arguments: []
-2023-03-30 22:55:55.794 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@3943a2be with arguments: []
-2023-03-30 22:56:26.396 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 22:56:26.400 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.txt
-2023-03-30 22:56:26.400 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:36)] - Initializing input stream from file is succeed
-2023-03-30 22:56:26.400 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
-2023-03-30 22:56:26.400 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
-2023-03-30 22:56:26.401 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Define@45ca843 with arguments: [a, 7]
-2023-03-30 22:56:26.401 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Define@757acd7b with arguments: [b, 2]
-2023-03-30 22:56:26.401 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@36b4fe2a with arguments: [b]
-2023-03-30 22:56:26.401 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Comment@574b560f with arguments: [It, is, a, comment]
-2023-03-30 22:56:26.402 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@ba54932 with arguments: [a]
-2023-03-30 22:56:26.402 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sum@28975c28 with arguments: []
-2023-03-30 22:56:26.402 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@3943a2be with arguments: []
-2023-03-30 22:56:57.861 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 22:56:57.866 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.txt
-2023-03-30 22:56:57.866 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:36)] - Initializing input stream from file is succeed
-2023-03-30 22:56:57.867 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
-2023-03-30 22:56:57.867 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
-2023-03-30 22:56:57.867 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Define@45ca843 with arguments: [a, 7]
-2023-03-30 22:56:57.868 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Define@757acd7b with arguments: [b, 2]
-2023-03-30 22:56:57.868 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@36b4fe2a with arguments: [b]
-2023-03-30 22:56:57.868 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Comment@574b560f with arguments: [It, is, a, comment]
-2023-03-30 22:56:57.869 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@ba54932 with arguments: [a]
-2023-03-30 22:56:57.869 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sum@28975c28 with arguments: []
-2023-03-30 22:56:57.869 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@3943a2be with arguments: []
-2023-03-30 22:57:14.712 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 22:57:14.716 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
-2023-03-30 22:57:14.716 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
-2023-03-30 22:57:14.716 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 22:57:14.717 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
-2023-03-30 22:57:14.717 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
-2023-03-30 22:57:14.717 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
-2023-03-30 22:57:19.319 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@45ca843 with arguments: [3]
-2023-03-30 22:57:30.321 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@757acd7b with arguments: [1]
-2023-03-30 22:57:31.322 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sum@36b4fe2a with arguments: []
-2023-03-30 22:57:33.322 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@574b560f with arguments: []
-2023-03-30 22:57:42.722 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 22:57:42.725 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
-2023-03-30 22:57:42.725 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
-2023-03-30 22:57:42.726 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 22:57:42.726 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
-2023-03-30 22:57:42.726 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
-2023-03-30 22:57:42.726 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
-2023-03-30 22:57:48.385 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@45ca843 with arguments: [3]
-2023-03-30 22:57:57.617 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 22:57:57.621 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
-2023-03-30 22:57:57.621 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
-2023-03-30 22:57:57.621 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 22:57:57.621 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
-2023-03-30 22:57:57.622 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
-2023-03-30 22:57:57.622 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
-2023-03-30 22:58:03.781 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 22:58:03.785 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
-2023-03-30 22:58:03.785 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
-2023-03-30 22:58:03.785 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 22:58:03.786 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
-2023-03-30 22:58:03.786 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
-2023-03-30 22:58:03.786 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
-2023-03-30 22:58:31.447 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 22:58:31.451 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
-2023-03-30 22:58:31.451 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
-2023-03-30 22:58:31.451 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 22:58:31.451 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
-2023-03-30 22:58:31.451 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
-2023-03-30 22:58:31.452 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
-2023-03-30 22:58:36.105 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@45ca843 with arguments: [3]
-2023-03-30 22:58:38.105 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@757acd7b with arguments: [1]
-2023-03-30 22:58:39.105 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sum@36b4fe2a with arguments: []
-2023-03-30 22:58:42.105 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@574b560f with arguments: []
-2023-03-30 23:00:27.396 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 23:00:27.400 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
-2023-03-30 23:00:27.400 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
-2023-03-30 23:00:27.400 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 23:00:27.400 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
-2023-03-30 23:00:27.401 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
-2023-03-30 23:00:27.401 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
-2023-03-30 23:01:36.512 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 23:01:36.516 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
-2023-03-30 23:01:36.516 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
-2023-03-30 23:01:36.516 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 23:01:36.516 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
-2023-03-30 23:01:36.517 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:41)] - The calculator has started working
-2023-03-30 23:01:36.517 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:52)] - Starting to read commands with arguments from input stream...
-2023-03-30 23:12:01.633 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 23:12:01.638 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:42)] - Configuring command factory with file commandFactoryConfig.txt is done
-2023-03-30 23:12:01.639 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
-2023-03-30 23:12:01.639 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
-2023-03-30 23:12:01.640 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 23:12:01.640 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:42)] - Configuring command factory with file commandFactoryConfig.txt is done
-2023-03-30 23:12:01.641 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
-2023-03-30 23:12:01.641 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
-2023-03-30 23:12:01.641 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
-2023-03-30 23:12:09.282 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@45ca843 with arguments: [32]
-2023-03-30 23:12:11.282 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@757acd7b with arguments: [21]
-2023-03-30 23:12:13.283 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sum@36b4fe2a with arguments: []
-2023-03-30 23:12:14.283 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@574b560f with arguments: []
-2023-03-30 16:24:18.586 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 16:24:18.588 ERROR [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:27)] - Configuring file 'commandFactoryConfig.txt was not found
-2023-03-30 16:24:18.589 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:44)] - Cannot configuring factory with file 'commandFactoryConfig.txt
-2023-03-30 16:24:18.589 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
-2023-03-30 16:24:18.589 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
-2023-03-30 16:24:18.589 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
-2023-03-30 16:24:24.225 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.getCommand(CommandFactory.java:56)] - Command 'PUSH' doesn't exist
-java.lang.NullPointerException: null
-	at java.util.Objects.requireNonNull(Objects.java:208) ~[?:?]
-	at ru.nsu.fit.neltanov.calculator.CommandFactory.getCommand(CommandFactory.java:53) ~[main/:?]
-	at ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:63) ~[main/:?]
-	at ru.nsu.fit.neltanov.calculator.Main.main(Main.java:11) ~[main/:?]
-2023-03-30 23:30:16.564 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 23:30:16.569 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:42)] - Configuring command factory with file commandFactoryConfig.txt is done
-2023-03-30 23:30:16.569 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
-2023-03-30 23:30:16.569 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
-2023-03-30 23:30:16.569 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 23:30:16.570 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:42)] - Configuring command factory with file commandFactoryConfig.txt is done
-2023-03-30 23:30:16.570 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
-2023-03-30 23:30:16.570 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
-2023-03-30 23:30:16.570 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
-2023-03-30 23:30:20.205 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@45ca843 with arguments: [2]
-2023-03-30 23:30:21.205 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@757acd7b with arguments: [4]
-2023-03-30 23:30:23.206 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sum@36b4fe2a with arguments: []
-2023-03-30 23:30:27.206 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@574b560f with arguments: []
-2023-03-30 16:34:59.573 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
-2023-03-30 16:34:59.582 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:42)] - Configuring command factory with file commandFactoryConfig.txt is done
-2023-03-30 16:34:59.582 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
-2023-03-30 16:34:59.582 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
-2023-03-30 16:34:59.582 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
-2023-03-30 16:35:08.194 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@3fb1549b with arguments: [3]
-2023-03-30 16:35:11.210 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@4d02f94e with arguments: [5]
-2023-03-30 16:35:13.227 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sum@2b48a640 with arguments: []
-2023-03-30 16:35:14.235 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@1e683a3e with arguments: []
-2023-03-30 16:35:28.326 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.getCommand(CommandFactory.java:56)] - Command 'adf' doesn't exist
-java.lang.NullPointerException: null
-	at java.util.Objects.requireNonNull(Objects.java:208) ~[?:?]
-	at ru.nsu.fit.neltanov.calculator.CommandFactory.getCommand(CommandFactory.java:53) ~[main/:?]
-	at ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:63) ~[main/:?]
-	at ru.nsu.fit.neltanov.calculator.Main.main(Main.java:11) ~[main/:?]
-2023-03-30 16:35:38.422 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@7fee8714 with arguments: [3]
-2023-03-30 16:35:38.423 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:72)] - Incorrect number of arguments entered to the command
-ru.nsu.fit.neltanov.calculator.exceptions.InvalidCountOfArithmeticArgumentsException: Invalid count of arguments in this command. Arguments are not needed here.
-	at ru.nsu.fit.neltanov.calculator.commands.Print.execute(Print.java:14) ~[main/:?]
+2023-04-04 09:14:58.982 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:14:58.989 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:42)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 09:14:58.990 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
+2023-04-04 09:14:58.990 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
+2023-04-04 09:14:58.990 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:14:58.991 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:42)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 09:14:58.991 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 09:14:58.991 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 09:14:58.991 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 09:15:03.578 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@1fb700ee with arguments: [0]
+2023-04-04 09:15:05.578 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@4f67eb2a with arguments: [1]
+2023-04-04 09:15:08.579 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Divide@5f683daf with arguments: []
+2023-04-04 09:15:08.579 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:82)] - Division by zero or taking the square root of a negative number was performed
+java.lang.ArithmeticException: null
+	at ru.nsu.fit.neltanov.calculator.commands.Divide.execute(Divide.java:20) ~[main/:?]
 	at ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:65) ~[main/:?]
 	at ru.nsu.fit.neltanov.calculator.Main.main(Main.java:11) ~[main/:?]
-2023-03-30 16:35:44.457 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@20ccf40b with arguments: []
-2023-03-30 16:35:49.482 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Pop@2fb3536e with arguments: []
-2023-03-30 16:35:53.501 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Pop@169e6180 with arguments: []
-2023-03-30 16:35:53.502 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:75)] - As a result of executing the command, the stack was empty
+2023-04-04 09:20:38.672 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:20:38.676 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:42)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 09:20:38.676 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
+2023-04-04 09:20:38.677 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
+2023-04-04 09:20:38.677 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:20:38.678 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:42)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 09:20:38.678 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 09:20:38.678 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 09:20:38.678 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 09:20:49.290 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Pop@45ca843 with arguments: []
+2023-04-04 09:20:49.290 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:75)] - As a result of executing the command, the stack was empty
 java.util.EmptyStackException: null
 	at java.util.Stack.peek(Stack.java:101) ~[?:?]
 	at java.util.Stack.pop(Stack.java:83) ~[?:?]
@@ -174,11 +33,500 @@ java.util.EmptyStackException: null
 	at ru.nsu.fit.neltanov.calculator.commands.Pop.execute(Pop.java:16) ~[main/:?]
 	at ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:65) ~[main/:?]
 	at ru.nsu.fit.neltanov.calculator.Main.main(Main.java:11) ~[main/:?]
-2023-03-30 16:35:56.520 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@7205765b with arguments: []
-2023-03-30 16:35:56.520 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:75)] - As a result of executing the command, the stack was empty
-java.util.EmptyStackException: null
-	at java.util.Stack.peek(Stack.java:101) ~[?:?]
-	at ru.nsu.fit.neltanov.calculator.ExecutionContext.getNumberFromStack(ExecutionContext.java:14) ~[main/:?]
-	at ru.nsu.fit.neltanov.calculator.commands.Print.execute(Print.java:16) ~[main/:?]
-	at ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:65) ~[main/:?]
+2023-04-04 09:21:23.572 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:21:23.574 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:44)] - Cannot configuring factory with file 'commandFactoryConfig.txt
+2023-04-04 09:21:23.574 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
+2023-04-04 09:21:23.575 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
+2023-04-04 09:21:23.575 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:21:23.575 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:44)] - Cannot configuring factory with file 'commandFactoryConfig.txt
+2023-04-04 09:21:23.575 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 09:21:23.575 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 09:21:23.575 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 09:21:34.199 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.getCommand(CommandFactory.java:56)] - Command 'POP' doesn't exist
+java.lang.NullPointerException: null
+	at java.util.Objects.requireNonNull(Objects.java:208) ~[?:?]
+	at ru.nsu.fit.neltanov.calculator.CommandFactory.getCommand(CommandFactory.java:53) ~[main/:?]
+	at ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:63) ~[main/:?]
 	at ru.nsu.fit.neltanov.calculator.Main.main(Main.java:11) ~[main/:?]
+2023-04-04 09:22:05.331 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:22:05.335 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:42)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 09:22:05.335 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
+2023-04-04 09:22:05.335 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
+2023-04-04 09:22:05.335 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:23)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:22:05.336 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:42)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 09:22:05.336 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 09:22:05.336 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 09:22:05.336 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 09:34:10.716 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:34:10.719 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:41)] - Command ru.nsu.fit.neltanov.calculator.commands.Comment is not ariphmetic command
+2023-04-04 09:36:35.653 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:36:35.655 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:51)] - Command from file is not ariphmetic command
+2023-04-04 09:36:35.656 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
+2023-04-04 09:36:35.656 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
+2023-04-04 09:36:35.656 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:36:35.656 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:51)] - Command from file is not ariphmetic command
+2023-04-04 09:36:35.656 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 09:36:35.657 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 09:36:35.657 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 09:39:20.355 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:39:20.358 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:51)] - Command from file is not ariphmetic command
+2023-04-04 09:39:20.359 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
+2023-04-04 09:39:20.360 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
+2023-04-04 09:39:20.360 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:39:20.360 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:51)] - Command from file is not ariphmetic command
+2023-04-04 09:39:20.361 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 09:39:20.361 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 09:39:20.361 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 09:41:47.296 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:41:47.299 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:51)] - Command from file is not ariphmetic command
+2023-04-04 09:41:47.301 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
+2023-04-04 09:41:47.301 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
+2023-04-04 09:41:47.301 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:41:47.302 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:51)] - Command from file is not ariphmetic command
+2023-04-04 09:41:47.302 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 09:41:47.302 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 09:41:47.303 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 09:42:15.032 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:46:10.791 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:48:44.455 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:54:46.810 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:56:03.101 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:56:03.104 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:53)] - Command from file is not ariphmetic command
+2023-04-04 09:56:03.104 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
+2023-04-04 09:56:03.105 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
+2023-04-04 09:56:03.105 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:56:03.105 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:53)] - Command from file is not ariphmetic command
+2023-04-04 09:56:03.105 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 09:56:03.105 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 09:56:03.106 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 09:56:20.920 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:56:20.922 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:53)] - Command from file is not ariphmetic command
+2023-04-04 09:56:20.923 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
+2023-04-04 09:56:20.923 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
+2023-04-04 09:56:20.924 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:56:20.924 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:53)] - Command from file is not ariphmetic command
+2023-04-04 09:56:20.924 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 09:56:20.924 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 09:56:20.924 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 09:56:33.942 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:57:05.473 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:53)] - Command from file is not ariphmetic command
+2023-04-04 09:57:11.471 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
+2023-04-04 09:57:26.691 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
+2023-04-04 09:57:39.368 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 09:58:24.135 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:53)] - Command from file is not ariphmetic command
+2023-04-04 09:58:40.164 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 10:00:11.276 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:53)] - Command from file is not ariphmetic command
+2023-04-04 10:00:17.367 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
+2023-04-04 10:00:22.935 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
+2023-04-04 10:00:28.814 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 10:07:11.976 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 10:07:11.978 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:53)] - Command from file is not ariphmetic command
+2023-04-04 10:07:11.979 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.tx
+2023-04-04 10:07:11.979 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
+2023-04-04 10:07:11.979 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 10:07:11.980 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:53)] - Command from file is not ariphmetic command
+2023-04-04 10:07:11.980 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 10:07:11.980 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 10:07:11.980 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 10:07:39.249 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 10:07:39.251 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:53)] - Command from file is not ariphmetic command
+2023-04-04 10:07:39.252 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 10:07:39.252 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 10:07:39.252 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 10:08:04.164 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 10:08:04.166 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:53)] - Command from file is not ariphmetic command
+2023-04-04 10:08:04.167 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 10:08:04.167 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 10:08:04.167 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 10:08:20.476 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 10:08:20.479 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:53)] - Command from file is not ariphmetic command
+2023-04-04 10:08:20.479 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 10:08:20.479 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 10:08:20.480 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 10:08:28.101 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.getCommand(CommandFactory.java:65)] - Command '-' doesn't exist
+java.lang.NullPointerException: null
+	at java.util.Objects.requireNonNull(Objects.java:208) ~[?:?]
+	at ru.nsu.fit.neltanov.calculator.CommandFactory.getCommand(CommandFactory.java:62) ~[main/:?]
+	at ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:63) ~[main/:?]
+	at ru.nsu.fit.neltanov.calculator.Main.main(Main.java:15) ~[main/:?]
+2023-04-04 10:11:00.212 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 10:11:00.214 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:53)] - Command from file is not ariphmetic command
+2023-04-04 10:11:00.215 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 10:11:00.215 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 10:11:00.215 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 10:11:05.864 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.getCommand(CommandFactory.java:65)] - Command '+' doesn't exist
+java.lang.NullPointerException: null
+	at java.util.Objects.requireNonNull(Objects.java:208) ~[?:?]
+	at ru.nsu.fit.neltanov.calculator.CommandFactory.getCommand(CommandFactory.java:62) ~[main/:?]
+	at ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:63) ~[main/:?]
+	at ru.nsu.fit.neltanov.calculator.Main.main(Main.java:15) ~[main/:?]
+2023-04-04 10:13:37.246 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.tx
+2023-04-04 10:13:37.248 ERROR [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:28)] - Configuring file 'commandFactoryConfig.tx was not found
+2023-04-04 10:13:37.249 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:50)] - Cannot configuring factory with file 'commandFactoryConfig.tx
+2023-04-04 10:13:37.249 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 10:13:37.249 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 10:13:37.249 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 10:20:57.924 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 10:20:57.927 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:53)] - Command from file is not ariphmetic command
+2023-04-04 10:20:57.927 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 10:20:57.928 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 10:20:57.928 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 10:21:45.533 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 10:21:45.536 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:50)] - Cannot configuring factory with file 'commandFactoryConfig.txt
+2023-04-04 10:21:45.536 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 10:21:45.536 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 10:21:45.536 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 10:22:05.658 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 10:22:05.661 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:48)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 10:22:05.662 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 10:22:05.662 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 10:22:05.662 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 10:22:12.319 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@757acd7b with arguments: [0]
+2023-04-04 10:22:13.319 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@36b4fe2a with arguments: [1]
+2023-04-04 10:22:15.319 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Divide@ba54932 with arguments: []
+2023-04-04 10:22:15.320 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:82)] - Division by zero or taking the square root of a negative number was performed
+ru.nsu.fit.neltanov.calculator.exceptions.DivisionByZeroException: Division by zero
+	at ru.nsu.fit.neltanov.calculator.commands.Divide.execute(Divide.java:21) ~[main/:?]
+	at ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:65) ~[main/:?]
+	at ru.nsu.fit.neltanov.calculator.Main.main(Main.java:15) ~[main/:?]
+2023-04-04 10:22:21.321 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@2525ff7e with arguments: [-1]
+2023-04-04 10:22:25.322 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sqrt@524d6d96 with arguments: []
+2023-04-04 10:22:25.323 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:82)] - Division by zero or taking the square root of a negative number was performed
+ru.nsu.fit.neltanov.calculator.exceptions.NegativeSquareRootException: Taking the square root of a negative number
+	at ru.nsu.fit.neltanov.calculator.commands.Sqrt.execute(Sqrt.java:19) ~[main/:?]
+	at ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:65) ~[main/:?]
+	at ru.nsu.fit.neltanov.calculator.Main.main(Main.java:15) ~[main/:?]
+2023-04-04 10:23:15.964 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:24)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 10:23:15.968 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:48)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 10:23:15.969 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 10:23:15.969 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 10:23:15.969 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 10:23:21.541 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@757acd7b with arguments: [0]
+2023-04-04 10:23:22.540 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@36b4fe2a with arguments: [1]
+2023-04-04 10:23:23.541 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Divide@ba54932 with arguments: []
+2023-04-04 10:23:23.542 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:82)] - Division by zero
+ru.nsu.fit.neltanov.calculator.exceptions.DivisionByZeroException: Division by zero
+	at ru.nsu.fit.neltanov.calculator.commands.Divide.execute(Divide.java:21) ~[main/:?]
+	at ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:65) ~[main/:?]
+	at ru.nsu.fit.neltanov.calculator.Main.main(Main.java:15) ~[main/:?]
+2023-04-04 11:27:51.804 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 11:27:51.807 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 11:27:51.807 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 11:27:51.808 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 11:27:51.808 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 11:28:00.466 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@757acd7b with arguments: [3]
+2023-04-04 11:28:03.466 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@574b560f with arguments: [4]
+2023-04-04 11:28:04.466 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sum@ba54932 with arguments: []
+2023-04-04 11:28:06.467 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@28975c28 with arguments: []
+2023-04-04 11:29:28.334 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 11:29:28.337 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:50)] - ru.nsu.fit.neltanov.calculator.commands.Define.execute(ru.nsu.fit.neltanov.calculator.ExecutionContext,java.util.List)
+2023-04-04 11:29:28.338 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 11:29:28.338 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 11:29:28.338 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 11:29:28.338 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 11:41:09.233 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 11:41:09.236 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:60)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 11:41:09.237 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 11:41:09.237 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 11:41:09.237 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 11:41:20.885 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@757acd7b with arguments: [3]
+2023-04-04 11:41:22.886 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@574b560f with arguments: [4]
+2023-04-04 11:41:34.340 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 11:41:34.344 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:60)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 11:41:34.344 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 11:41:34.344 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 11:41:34.344 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 11:41:37.004 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@757acd7b with arguments: [4]
+2023-04-04 11:41:40.006 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@574b560f with arguments: [1]
+2023-04-04 11:41:42.008 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sum@ba54932 with arguments: []
+2023-04-04 11:41:44.009 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@28975c28 with arguments: []
+2023-04-04 11:42:42.856 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 11:42:42.860 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:60)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 11:42:42.860 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 11:42:42.860 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 11:42:42.861 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 11:42:57.549 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 11:42:57.551 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:62)] - Cannot configuring factory with file 'commandFactoryConfig.txt
+2023-04-04 11:42:57.552 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 11:42:57.552 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 11:42:57.552 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 11:50:28.331 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@50caa560 with arguments: [4]
+2023-04-04 11:58:08.379 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 11:58:08.382 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:62)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 11:58:08.382 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 11:58:08.383 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 11:58:08.383 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 11:59:47.643 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 11:59:47.647 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:63)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 11:59:47.647 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 11:59:47.648 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 11:59:47.648 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 12:00:14.015 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 12:00:14.019 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:63)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 12:00:14.020 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 12:00:14.020 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 12:00:14.020 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 12:02:03.216 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 12:02:03.220 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:56)] - Method ru.nsu.fit.neltanov.calculator.commands.Define.execute(ru.nsu.fit.neltanov.calculator.ExecutionContext,java.util.List) was not found in command class, so command is not calculator command
+2023-04-04 12:02:03.220 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:63)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 12:02:03.221 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 12:02:03.221 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 12:02:03.221 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 12:05:36.369 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 12:05:36.373 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:56)] - Method 'ru.nsu.fit.neltanov.calculator.commands.Define.execute(ru.nsu.fit.neltanov.calculator.ExecutionContext,java.util.List)' was not found in command class.
+So command is not calculator command
+2023-04-04 12:05:36.373 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:63)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 12:05:36.374 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 12:05:36.374 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 12:05:36.374 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 12:06:00.372 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 12:06:00.377 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:56)] - Method 'ru.nsu.fit.neltanov.calculator.commands.Define.execute(ru.nsu.fit.neltanov.calculator.ExecutionContext,java.util.List)' was not found in command class.
+So command is not calculator command
+2023-04-04 12:06:00.378 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:63)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 12:06:00.378 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 12:06:00.378 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 12:06:00.378 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 12:06:12.995 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@757acd7b with arguments: [32]
+2023-04-04 12:06:15.994 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@574b560f with arguments: [12]
+2023-04-04 12:06:33.147 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 12:06:33.151 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:56)] - Method 'ru.nsu.fit.neltanov.calculator.commands.Define.execute(ru.nsu.fit.neltanov.calculator.ExecutionContext,java.util.List)' was not found in command class.
+So command is not calculator command
+2023-04-04 12:06:33.151 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:63)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 12:06:33.152 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 12:06:33.152 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 12:06:33.152 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 12:06:39.814 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@757acd7b with arguments: [3]
+2023-04-04 12:06:41.813 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@574b560f with arguments: [31]
+2023-04-04 12:06:42.814 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sum@ba54932 with arguments: []
+2023-04-04 12:06:44.815 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@28975c28 with arguments: []
+2023-04-04 12:07:28.480 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 12:07:28.484 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:63)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 12:07:28.484 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 12:07:28.485 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 12:07:28.485 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 12:07:43.114 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@757acd7b with arguments: [12]
+2023-04-04 12:07:46.114 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@574b560f with arguments: [12]
+2023-04-04 12:07:48.114 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@ba54932 with arguments: [12]
+2023-04-04 12:07:51.115 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Substract@28975c28 with arguments: []
+2023-04-04 12:07:52.116 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@3943a2be with arguments: []
+2023-04-04 12:18:25.045 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 12:18:25.049 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:63)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 12:18:25.049 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 12:18:25.049 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 12:18:25.050 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 12:18:27.702 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@757acd7b with arguments: [3]
+2023-04-04 12:18:29.702 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@574b560f with arguments: [4]
+2023-04-04 12:18:30.702 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sum@ba54932 with arguments: []
+2023-04-04 12:18:34.703 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@28975c28 with arguments: []
+2023-04-04 12:34:13.605 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 12:34:13.608 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:63)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 12:34:13.608 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 12:34:13.608 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 12:34:13.609 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 12:34:42.787 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 12:34:42.790 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:63)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 12:34:42.790 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 12:34:42.790 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 12:34:42.791 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 12:35:31.317 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 12:35:31.321 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:63)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 12:35:31.321 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 12:35:31.321 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 12:35:31.322 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 12:36:19.236 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 12:36:19.239 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:63)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 12:36:19.240 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 12:36:19.240 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 12:36:19.240 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:16:44.760 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:16:44.764 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:16:44.764 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:16:44.765 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:16:44.765 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:17:03.444 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@757acd7b with arguments: []
+2023-04-04 16:17:03.445 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:72)] - Incorrect number of arguments entered to the command
+ru.nsu.fit.neltanov.calculator.exceptions.InvalidCountOfArgumentsException: Invalid count of arguments in this command. This command requires 1 argument(s)
+	at ru.nsu.fit.neltanov.calculator.commands.Push.execute(Push.java:13) ~[main/:?]
+	at ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:65) ~[main/:?]
+	at ru.nsu.fit.neltanov.calculator.Main.main(Main.java:20) ~[main/:?]
+2023-04-04 16:17:07.443 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@2e1d27ba with arguments: [1]
+2023-04-04 16:17:10.445 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@2525ff7e with arguments: [3, 2]
+2023-04-04 16:17:10.446 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:72)] - Incorrect number of arguments entered to the command
+ru.nsu.fit.neltanov.calculator.exceptions.InvalidCountOfArgumentsException: Invalid count of arguments in this command. This command requires 1 argument(s)
+	at ru.nsu.fit.neltanov.calculator.commands.Push.execute(Push.java:13) ~[main/:?]
+	at ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:65) ~[main/:?]
+	at ru.nsu.fit.neltanov.calculator.Main.main(Main.java:20) ~[main/:?]
+2023-04-04 16:17:16.447 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@524d6d96 with arguments: []
+2023-04-04 16:17:20.449 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@152aa092 with arguments: [3]
+2023-04-04 16:17:24.450 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sum@44a7bfbc with arguments: []
+2023-04-04 16:17:29.451 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@4ef37659 with arguments: []
+2023-04-04 16:23:12.926 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:23:12.932 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:23:12.933 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:23:12.933 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:23:12.934 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:23:29.538 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.getCommand(CommandFactory.java:69)] - Command '+' doesn't exist
+java.lang.NullPointerException: null
+	at java.util.Objects.requireNonNull(Objects.java:208) ~[?:?]
+	at ru.nsu.fit.neltanov.calculator.CommandFactory.getCommand(CommandFactory.java:66) ~[main/:?]
+	at ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:63) ~[main/:?]
+	at ru.nsu.fit.neltanov.calculator.Main.main(Main.java:20) ~[main/:?]
+2023-04-04 16:24:17.596 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:24:17.600 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:24:17.601 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:24:17.601 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:24:17.601 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:25:18.667 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:25:18.671 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:25:18.671 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:25:18.672 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:25:18.672 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:25:51.331 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:25:51.334 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:50)] - Command 'ru.nsu.fit.neltanov.calculator.Main' from file 'commandFactoryConfig.txt' is not a calculator command
+2023-04-04 16:25:51.336 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:25:51.336 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:25:51.337 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:25:51.337 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:27:41.146 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:27:41.148 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:50)] - Command 'ru.nsu.fit.neltanov.calculator.Main' from file 'commandFactoryConfig.txt' is not a calculator command
+2023-04-04 16:27:41.149 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:27:41.149 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:27:41.149 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:27:41.150 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:28:53.455 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:28:53.457 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:50)] - Command 'ru.nsu.fit.neltanov.calculator.Main' from file 'commandFactoryConfig.txt' is not a calculator command
+2023-04-04 16:28:53.459 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:28:53.459 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:28:53.459 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:28:53.459 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:29:09.995 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:29:09.998 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:50)] - Command 'ru.nsu.fit.neltanov.calculator.Main' from file 'commandFactoryConfig.txt' is not a calculator command
+2023-04-04 16:29:09.999 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:29:09.999 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:29:09.999 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:29:09.999 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:29:48.859 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:29:48.862 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:50)] - Command 'ru.nsu.fit.neltanov.calculator.Main' from file 'commandFactoryConfig.txt' is not a calculator command
+2023-04-04 16:29:48.863 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:29:48.863 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:29:48.864 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:29:48.864 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:30:14.726 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:30:14.728 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:50)] - Command 'ru.nsu.fit.neltanov.calculator.Main' from file 'commandFactoryConfig.txt' is not a calculator command
+2023-04-04 16:30:14.730 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:30:14.730 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:30:14.730 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:30:14.730 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:30:36.266 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:30:36.270 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:50)] - Command 'ru.nsu.fit.neltanov.calculator.Main' from file 'commandFactoryConfig.txt' is not a calculator command
+2023-04-04 16:30:36.271 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:30:36.272 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:30:36.272 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:30:36.272 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:30:51.296 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:30:51.298 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:50)] - Command 'ru.nsu.fit.neltanov.calculator.Main' from file 'commandFactoryConfig.txt' is not a calculator command
+2023-04-04 16:30:51.299 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:30:51.299 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:30:51.300 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:30:51.300 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:32:45.129 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:32:45.133 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:50)] - Command 'ru.nsu.fit.neltanov.calculator.Main' from file 'commandFactoryConfig.txt' is not a calculator command
+2023-04-04 16:32:45.135 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:32:45.135 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:32:45.135 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:32:45.136 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:33:01.558 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:33:01.560 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:50)] - Command 'ru.nsu.fit.neltanov.calculator.Main' from file 'commandFactoryConfig.txt' is not a calculator command
+2023-04-04 16:33:01.562 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:33:01.562 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:33:01.562 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:33:01.562 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:33:11.427 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:33:11.429 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:50)] - Command 'ru.nsu.fit.neltanov.calculator.Main' from file 'commandFactoryConfig.txt' is not a calculator command
+2023-04-04 16:33:11.431 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:33:11.431 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:33:11.431 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:33:11.431 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:34:11.029 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:34:11.032 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:50)] - Command 'ru.nsu.fit.neltanov.calculator.Main' from file 'commandFactoryConfig.txt' is not a calculator command
+2023-04-04 16:34:11.033 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:34:11.033 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file command.txt
+2023-04-04 16:34:11.034 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
+2023-04-04 16:34:11.034 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:34:11.034 WARN [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:50)] - Command 'ru.nsu.fit.neltanov.calculator.Main' from file 'commandFactoryConfig.txt' is not a calculator command
+2023-04-04 16:34:11.034 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:34:11.034 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:34:11.035 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:34:11.035 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:37:10.614 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:37:10.617 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:37:10.617 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file command.txt
+2023-04-04 16:37:10.618 WARN [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:32)] - The command file was not found
+2023-04-04 16:37:10.618 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:37:10.618 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:37:10.619 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:37:10.619 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:37:10.619 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:37:30.869 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:37:30.872 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:37:30.873 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.txt
+2023-04-04 16:37:30.873 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:36)] - Initializing input stream from file is succeed
+2023-04-04 16:37:30.873 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:37:30.873 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:37:30.879 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Define@45ca843 with arguments: [a, 7]
+2023-04-04 16:37:30.880 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Define@757acd7b with arguments: [b, 2]
+2023-04-04 16:37:30.880 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@36b4fe2a with arguments: [b]
+2023-04-04 16:37:30.880 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Comment@574b560f with arguments: [It, is, a, comment]
+2023-04-04 16:37:30.880 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@ba54932 with arguments: [a]
+2023-04-04 16:37:30.881 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sum@28975c28 with arguments: []
+2023-04-04 16:37:30.881 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@3943a2be with arguments: []
+2023-04-04 16:38:32.160 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:38:32.164 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:38:32.164 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:27)] - Trying to initialize input stream from file commands.txt
+2023-04-04 16:38:32.164 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:36)] - Initializing input stream from file is succeed
+2023-04-04 16:38:32.165 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:38:32.165 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:38:32.165 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Define@45ca843 with arguments: [a, 7]
+2023-04-04 16:38:32.166 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Define@757acd7b with arguments: [b, 2]
+2023-04-04 16:38:32.166 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@36b4fe2a with arguments: [b]
+2023-04-04 16:38:32.166 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Comment@574b560f with arguments: [It, is, a, comment]
+2023-04-04 16:38:32.166 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Push@ba54932 with arguments: [a]
+2023-04-04 16:38:32.166 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sum@28975c28 with arguments: []
+2023-04-04 16:38:32.166 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@3943a2be with arguments: []
+2023-04-04 16:38:32.167 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Sqrt@343570b7 with arguments: []
+2023-04-04 16:38:32.167 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:64)] - Executing command: ru.nsu.fit.neltanov.calculator.commands.Print@157853da with arguments: []
+2023-04-04 16:40:06.000 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:40:06.003 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:40:06.003 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:40:06.004 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:40:06.004 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:40:41.536 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:40:41.539 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:40:41.540 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:40:41.540 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:40:41.540 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:40:57.913 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:40:57.916 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:40:57.917 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:40:57.917 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:40:57.917 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:43:35.840 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:43:35.844 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:43:35.844 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:43:35.844 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:43:35.844 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:45:36.539 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:45:36.542 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:45:36.542 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:45:36.542 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:45:36.542 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:46:02.504 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:46:02.507 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:46:02.507 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:46:02.507 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:46:02.507 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...
+2023-04-04 16:47:12.697 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:25)] - Configuring command factory with file commandFactoryConfig.txt
+2023-04-04 16:47:12.701 INFO [main] [ru.nsu.fit.neltanov.calculator.CommandFactory.<init>(CommandFactory.java:55)] - Configuring command factory with file commandFactoryConfig.txt is done
+2023-04-04 16:47:12.701 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.<init>(StackCalculator.java:23)] - Input stream initialized from standard input stream
+2023-04-04 16:47:12.701 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:40)] - The calculator has started working
+2023-04-04 16:47:12.701 INFO [main] [ru.nsu.fit.neltanov.calculator.StackCalculator.run(StackCalculator.java:51)] - Starting to read commands with arguments from input stream...

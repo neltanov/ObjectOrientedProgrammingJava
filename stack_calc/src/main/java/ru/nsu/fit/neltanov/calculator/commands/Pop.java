@@ -1,7 +1,7 @@
 package ru.nsu.fit.neltanov.calculator.commands;
 
 import ru.nsu.fit.neltanov.calculator.ExecutionContext;
-import ru.nsu.fit.neltanov.calculator.exceptions.InvalidCountOfArithmeticArgumentsException;
+import ru.nsu.fit.neltanov.calculator.exceptions.InvalidCountOfArgumentsException;
 
 import java.util.EmptyStackException;
 import java.util.List;
@@ -9,9 +9,9 @@ import java.util.List;
 public class Pop implements Command {
     @Override
     public void execute(ExecutionContext context, List<String> arguments)
-            throws InvalidCountOfArithmeticArgumentsException, EmptyStackException {
+            throws InvalidCountOfArgumentsException, EmptyStackException {
         if (arguments.size() != 0) {
-            throw new InvalidCountOfArithmeticArgumentsException();
+            throw new InvalidCountOfArgumentsException(0);
         }
         context.popNumberFromStack();
     }
