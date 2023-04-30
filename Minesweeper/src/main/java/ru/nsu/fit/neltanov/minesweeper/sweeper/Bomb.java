@@ -28,7 +28,7 @@ class Bomb {
     }
 
     private void placeBomb() {
-        while(true) {
+        while (true) {
             Coord coord = Ranges.getRandomCoord();
             if (Box.BOMB == bombMap.get(coord)) {
                 continue;
@@ -40,10 +40,14 @@ class Bomb {
     }
 
     private void incrementNumbersAroundTheBomb(Coord coord) {
-        for (Coord around: Ranges.getCoordsAround(coord)) {
+        for (Coord around : Ranges.getCoordsAround(coord)) {
             if (Box.BOMB != bombMap.get(around)) {
                 bombMap.set(around, bombMap.get(around).nextNumberBox());
             }
         }
+    }
+
+    int getTotalBombs() {
+        return totalBombs;
     }
 }

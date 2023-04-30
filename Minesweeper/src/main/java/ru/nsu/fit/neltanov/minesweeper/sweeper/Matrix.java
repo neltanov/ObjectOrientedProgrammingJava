@@ -2,9 +2,10 @@ package ru.nsu.fit.neltanov.minesweeper.sweeper;
 
 class Matrix {
     private Box[][] matrix;
+
     Matrix(Box defaultBox) {
         matrix = new Box[Ranges.getSize().x][Ranges.getSize().y];
-        for (Coord coord: Ranges.getAllCoords()) {
+        for (Coord coord : Ranges.getAllCoords()) {
             matrix[coord.x][coord.y] = defaultBox;
         }
     }

@@ -27,7 +27,7 @@ public class Ranges {
     }
 
     public static boolean inRange(Coord coord) {
-        return coord.x >=0 && coord.x < size.x && coord.y >= 0 && coord.y < size.y;
+        return coord.x >= 0 && coord.x < size.x && coord.y >= 0 && coord.y < size.y;
     }
 
     static Coord getRandomCoord() {

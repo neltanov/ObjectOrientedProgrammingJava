@@ -13,11 +13,12 @@ public enum Box {
     BOMB,
     OPENED,
     CLOSED,
-    FLAGED,
+    FLAGGED,
     BOMBED,
     NOBOMB;
 
     public Object image;
+
     Box nextNumberBox() {
         return Box.values()[this.ordinal() + 1];
     }

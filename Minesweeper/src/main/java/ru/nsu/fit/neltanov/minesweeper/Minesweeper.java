@@ -5,14 +5,14 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Objects;
+
+import ru.nsu.fit.neltanov.minesweeper.sweeper.*;
 import ru.nsu.fit.neltanov.minesweeper.sweeper.Box;
-import ru.nsu.fit.neltanov.minesweeper.sweeper.Coord;
-import ru.nsu.fit.neltanov.minesweeper.sweeper.Game;
-import ru.nsu.fit.neltanov.minesweeper.sweeper.Ranges;
 
 public class Minesweeper extends JFrame {
     private Game game;
     private JPanel panel;
+    private JLabel label;
     private final int COLS = 9;
     private final int ROWS = 9;
     private final int IMG_SIZE = 50;
@@ -26,8 +26,15 @@ public class Minesweeper extends JFrame {
         game = new Game(COLS, ROWS, BOMBS);
         game.start();
         setImages();
+        initLabel();
         initPanel();
         initFrame();
+    }
+
+    private void initLabel() {
+        label = new JLabel("Welcome!");
+        add(label, BorderLayout.SOUTH);
+
     }
 
     private void initPanel() {
@@ -46,10 +53,17 @@ public class Minesweeper extends JFrame {
             public void mousePressed(MouseEvent e) {
                 int x = e.getX() / IMG_SIZE;
                 int y = e.getY() / IMG_SIZE;
-                Coord coord = new Coord(x, y);
+                Coord mouse_coord = new Coord(x, y);
                 if (e.getButton() == MouseEvent.BUTTON1) {
-                    game.pressLeftButton(coord);
+                    game.pressLeftButton(mouse_coord);
                 }
+                if (e.getButton() == MouseEvent.BUTTON3) {
+                    game.pressRightButton(mouse_coord);
+                }
+                if (e.getButton() == MouseEvent.BUTTON2) {
+                    game.start();
+                }
+                label.setText(getMessage());
                 panel.repaint();
             }
         });
@@ -59,12 +73,12 @@ public class Minesweeper extends JFrame {
     }
 
     private void initFrame() {
-        pack();
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("Minesweeper");
-        setLocationRelativeTo(null);
         setResizable(false);
         setVisible(true);
+        pack();
+        setLocationRelativeTo(null);
         setIconImage(getImage("icon"));
     }
 
@@ -78,5 +92,22 @@ public class Minesweeper extends JFrame {
         String filename = "img/" + name.toLowerCase() + ".png";
         ImageIcon icon = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource(filename)));
         return icon.getImage();
+    }
+
+    private String getMessage() {
+        switch (game.getState()) {
+            case PLAYED -> {
+                return "Think twice";
+            }
+            case BOMBED -> {
+                return "You lose!";
+            }
+            case WINNER -> {
+                return "You won! Congratulations!";
+            }
+            default -> {
+                return "";
+            }
+        }
     }
 }
