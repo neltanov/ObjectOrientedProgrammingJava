@@ -13,10 +13,10 @@ public class Minesweeper extends JFrame {
     private Game game;
     private JPanel panel;
     private JLabel label;
-    private final int COLS = 9;
-    private final int ROWS = 9;
+    private final int COLS = 30;
+    private final int ROWS = 20;
     private final int IMG_SIZE = 28;
-    private final int BOMBS = 10;
+    private final int BOMBS = 100;
 
     public static void main(String[] args) {
         new Minesweeper();
