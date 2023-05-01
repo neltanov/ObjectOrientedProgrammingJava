@@ -2,7 +2,6 @@ package ru.nsu.fit.neltanov.minesweeper.sweeper;
 
 class Flag {
     private Matrix flagMap;
-    private int totalFlags;
     private int countOfClosedBoxes;
 
     void start() {
