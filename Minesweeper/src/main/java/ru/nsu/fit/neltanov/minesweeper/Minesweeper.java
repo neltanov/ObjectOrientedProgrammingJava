@@ -15,7 +15,7 @@ public class Minesweeper extends JFrame {
     private JLabel label;
     private final int COLS = 9;
     private final int ROWS = 9;
-    private final int IMG_SIZE = 50;
+    private final int IMG_SIZE = 28;
     private final int BOMBS = 10;
 
     public static void main(String[] args) {
@@ -33,8 +33,8 @@ public class Minesweeper extends JFrame {
 
     private void initLabel() {
         label = new JLabel("Welcome!");
+        label.setHorizontalAlignment(SwingConstants.CENTER);
         add(label, BorderLayout.SOUTH);
-
     }
 
     private void initPanel() {
@@ -52,7 +52,9 @@ public class Minesweeper extends JFrame {
             @Override
             public void mousePressed(MouseEvent e) {
                 int x = e.getX() / IMG_SIZE;
-                int y = e.getY() / IMG_SIZE;
+                int y = e.getY() / IMG_SIZE - 1;
+                System.out.println("(" + e.getX() + "," + e.getY() + ")");
+                System.out.println("("+ x +"," + y +")");
                 Coord mouse_coord = new Coord(x, y);
                 if (e.getButton() == MouseEvent.BUTTON1) {
                     game.pressLeftButton(mouse_coord);
@@ -68,7 +70,7 @@ public class Minesweeper extends JFrame {
             }
         });
         setPreferredSize(new Dimension(Ranges.getSize().x * IMG_SIZE + 15,
-                Ranges.getSize().y * IMG_SIZE + 35));
+                Ranges.getSize().y * IMG_SIZE + 50));
         add(panel);
     }
 
