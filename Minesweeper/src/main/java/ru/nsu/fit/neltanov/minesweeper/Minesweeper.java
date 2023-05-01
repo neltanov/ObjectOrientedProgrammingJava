@@ -29,6 +29,7 @@ public class Minesweeper extends JFrame {
         initLabel();
         initPanel();
         initFrame();
+        System.out.println("hello");
     }
 
     private void initLabel() {
