@@ -13,10 +13,10 @@ public class Minesweeper extends JFrame {
     private Game game;
     private JPanel panel;
     private JLabel label;
-    private final int COLS = 30;
-    private final int ROWS = 20;
+    private final int COLS = 9;
+    private final int ROWS = 9;
     private final int IMG_SIZE = 28;
-    private final int BOMBS = 100;
+    private final int BOMBS = 10;
 
     public static void main(String[] args) {
         new Minesweeper();
@@ -53,8 +53,6 @@ public class Minesweeper extends JFrame {
             public void mousePressed(MouseEvent e) {
                 int x = e.getX() / IMG_SIZE;
                 int y = e.getY() / IMG_SIZE - 1;
-                System.out.println("(" + e.getX() + "," + e.getY() + ")");
-                System.out.println("("+ x +"," + y +")");
                 Coord mouse_coord = new Coord(x, y);
                 if (e.getButton() == MouseEvent.BUTTON1) {
                     game.pressLeftButton(mouse_coord);
