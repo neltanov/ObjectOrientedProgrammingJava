@@ -13,10 +13,12 @@ public class Minesweeper extends JFrame {
     private Game game;
     private JPanel panel;
     private JLabel label;
-    private final int COLS = 40;
-    private final int ROWS = 40;
-    private final int IMG_SIZE = 30;
-    private final int BOMBS = 40;
+    private final int COLS = 9;
+    private final int ROWS = 9;
+    private final int IMG_SIZE = 28;
+    private final int BOMBS = 10;
+
+    JLabel[] imageLabel = new JLabel[COLS * ROWS];
 
     public static void main(String[] args) {
         new Minesweeper();
@@ -38,7 +40,8 @@ public class Minesweeper extends JFrame {
     }
 
     private void initPanel() {
-        panel = new JPanel(new GridLayout(COLS, ROWS));
+        GridLayout layout = new GridLayout(COLS, ROWS);
+        panel = new JPanel(layout);
         paintGameField();
 
         addMouseListener(new MouseAdapter() {
