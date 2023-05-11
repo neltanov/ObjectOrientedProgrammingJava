@@ -15,10 +15,10 @@ public class Minesweeper extends JFrame {
     private JLabel label;
     private final int COLS = 9;
     private final int ROWS = 9;
-    private final int IMG_SIZE = 28;
+    private final int IMG_SIZE = 30;
     private final int BOMBS = 10;
 
-    JLabel[] imageLabel = new JLabel[COLS * ROWS];
+    JButton[][] buttons = new JButton[ROWS][COLS];
 
     public static void main(String[] args) {
         new Minesweeper();
@@ -40,34 +40,51 @@ public class Minesweeper extends JFrame {
     }
 
     private void initPanel() {
-        GridLayout layout = new GridLayout(COLS, ROWS);
+        GridLayout layout = new GridLayout(ROWS, COLS);
         panel = new JPanel(layout);
-        paintGameField();
+        Icon icon;
+        for (int i = 0; i < ROWS; i++) {
+            for (int j = 0; j < COLS; j++) {
+                icon = new ImageIcon((Image) game.getBox(new Coord(i, j)).image);
+                JButton button = new JButton(icon);
+                int finalI = i;
+                int finalJ = j;
+                button.addMouseListener(new MouseAdapter() {
+                    @Override
+                    public void mousePressed(MouseEvent e) {
+                        int x = finalI;
+                        int y = finalJ;
+                        System.out.println("(" + e.getX() + "," + e.getY() + ")");
+                        System.out.println("(" + x + "," + y + ")");
+                        Coord mouseCoord = new Coord(x, y);
+                        if (e.getButton() == MouseEvent.BUTTON1) {
+                            game.pressLeftButton(mouseCoord);
+                        }
+                        if (e.getButton() == MouseEvent.BUTTON3) {
+                            game.pressRightButton(mouseCoord);
+                        }
+                        if (e.getButton() == MouseEvent.BUTTON2) {
+                            game.start();
+                        }
+                        label.setText(getMessage());
 
-        addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                int x = e.getX() / IMG_SIZE;
-                int y = e.getY() / IMG_SIZE - 1;
-                System.out.println("(" + e.getX() + "," + e.getY() + ")");
-                System.out.println("("+ x +"," + y +")");
-                Coord mouseCoord = new Coord(x, y);
-                if (e.getButton() == MouseEvent.BUTTON1) {
-                    game.pressLeftButton(mouseCoord);
-                }
-                if (e.getButton() == MouseEvent.BUTTON3) {
-                    game.pressRightButton(mouseCoord);
-                }
-                if (e.getButton() == MouseEvent.BUTTON2) {
-                    game.start();
-                }
-                label.setText(getMessage());
-                panel.removeAll();
-                paintGameField();
-                panel.revalidate();
+//                        panel.revalidate();
+                        for (Coord coord : Ranges.getAllCoords()) {
+                            Icon icon = new ImageIcon((Image) game.getBox(coord).image);
+                            buttons[coord.x][coord.y].setIcon(icon);
+                            buttons[coord.x][coord.y].repaint();
+                        }
+//                        button.repaint();
+                    }
+                });
+                panel.add(button);
+                buttons[i][j] = button;
             }
-        });
-        System.out.println(Ranges.getSize().x + " " + Ranges.getSize().y);
+        }
+
+        getContentPane().add(panel, BorderLayout.CENTER);
+
+
         setPreferredSize(new Dimension(Ranges.getSize().x * IMG_SIZE + 15,
                 Ranges.getSize().y * IMG_SIZE + 50));
         add(panel);
@@ -81,16 +98,6 @@ public class Minesweeper extends JFrame {
         pack();
         setLocationRelativeTo(null);
         setIconImage(getImage("icon"));
-    }
-
-    private void paintGameField() {
-        ImageIcon icon;
-        JLabel imageLabel;
-        for (Coord coord : Ranges.getAllCoords()) {
-            icon = new ImageIcon((Image) game.getBox(coord).image);
-            imageLabel = new JLabel(icon);
-            panel.add(imageLabel);
-        }
     }
 
     private void setImages() {
