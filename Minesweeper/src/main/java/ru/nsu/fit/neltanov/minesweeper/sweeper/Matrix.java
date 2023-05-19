@@ -1,25 +1,26 @@
 package ru.nsu.fit.neltanov.minesweeper.sweeper;
 
 class Matrix {
-    private Box[][] matrix;
+    private final Box[][] matrix;
 
     Matrix(Box defaultBox) {
         matrix = new Box[Ranges.getSize().x][Ranges.getSize().y];
-        for (Coord coord : Ranges.getAllCoords()) {
-            matrix[coord.x][coord.y] = defaultBox;
+        for (Coords coords : Ranges.getAllCoords()) {
+            matrix[coords.x][coords.y] = defaultBox;
         }
     }
 
-    Box get(Coord coord) {
-        if (Ranges.inRange(coord)) {
-            return matrix[coord.x][coord.y];
+    Box get(Coords coords) {
+        if (Ranges.inRange(coords)) {
+            return matrix[coords.x][coords.y];
+        } else {
+            throw new NullPointerException("You didn't click on the button from the playing field\n");
         }
-        return null;
     }
 
-    void set(Coord coord, Box box) {
-        if (Ranges.inRange(coord)) {
-            matrix[coord.x][coord.y] = box;
+    void set(Coords coords, Box box) {
+        if (Ranges.inRange(coords)) {
+            matrix[coords.x][coords.y] = box;
         }
     }
 }

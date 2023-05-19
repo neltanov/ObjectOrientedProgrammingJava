@@ -2,8 +2,7 @@ package ru.nsu.fit.neltanov.minesweeper;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import java.util.Objects;
 
 import ru.nsu.fit.neltanov.minesweeper.sweeper.*;
@@ -18,7 +17,7 @@ public class Minesweeper extends JFrame {
     private final int IMG_SIZE = 30;
     private final int BOMBS = 10;
 
-    JButton[][] buttons = new JButton[ROWS][COLS];
+    JButton[][] buttons = new JButton[COLS][ROWS];
 
     public static void main(String[] args) {
         new Minesweeper();
@@ -43,59 +42,27 @@ public class Minesweeper extends JFrame {
         GridLayout layout = new GridLayout(ROWS, COLS);
         panel = new JPanel(layout);
         Icon icon;
-        for (int i = 0; i < ROWS; i++) {
-            for (int j = 0; j < COLS; j++) {
-                icon = new ImageIcon((Image) game.getBox(new Coord(i, j)).image);
+        for (int j = 0; j < ROWS; j++) {
+            for (int i = 0; i < COLS; i++) {
+                icon = new ImageIcon((Image) game.getBox(new Coords(i, j)).image);
                 JButton button = new JButton(icon);
-                int finalI = i;
-                int finalJ = j;
-                button.addMouseListener(new MouseAdapter() {
-                    @Override
-                    public void mousePressed(MouseEvent e) {
-                        int x = finalI;
-                        int y = finalJ;
-                        System.out.println("(" + e.getX() + "," + e.getY() + ")");
-                        System.out.println("(" + x + "," + y + ")");
-                        Coord mouseCoord = new Coord(x, y);
-                        if (e.getButton() == MouseEvent.BUTTON1) {
-                            game.pressLeftButton(mouseCoord);
-                        }
-                        if (e.getButton() == MouseEvent.BUTTON3) {
-                            game.pressRightButton(mouseCoord);
-                        }
-                        if (e.getButton() == MouseEvent.BUTTON2) {
-                            game.start();
-                        }
-                        label.setText(getMessage());
-
-//                        panel.revalidate();
-                        for (Coord coord : Ranges.getAllCoords()) {
-                            Icon icon = new ImageIcon((Image) game.getBox(coord).image);
-                            buttons[coord.x][coord.y].setIcon(icon);
-                            buttons[coord.x][coord.y].repaint();
-                        }
-//                        button.repaint();
-                    }
-                });
+                button.addMouseListener(new MouseEventHandler());
                 panel.add(button);
                 buttons[i][j] = button;
             }
         }
 
-        getContentPane().add(panel, BorderLayout.CENTER);
-
-
-        setPreferredSize(new Dimension(Ranges.getSize().x * IMG_SIZE + 15,
-                Ranges.getSize().y * IMG_SIZE + 50));
+        panel.setPreferredSize(new Dimension(Ranges.getSize().x * IMG_SIZE,
+                Ranges.getSize().y * IMG_SIZE));
         add(panel);
     }
 
     private void initFrame() {
+        pack();
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("Minesweeper");
         setResizable(false);
         setVisible(true);
-        pack();
         setLocationRelativeTo(null);
         setIconImage(getImage("icon"));
     }
@@ -126,6 +93,55 @@ public class Minesweeper extends JFrame {
             default -> {
                 return "";
             }
+        }
+    }
+
+    private class MouseEventHandler implements MouseListener {
+        @Override
+        public void mouseClicked(MouseEvent e) {
+        }
+
+        @Override
+        public void mousePressed(MouseEvent e) {
+            int x = (e.getXOnScreen() - getX()) / IMG_SIZE;
+            int y = (e.getYOnScreen() - getY() - IMG_SIZE) / IMG_SIZE;
+            Coords mouseCoords = new Coords(x, y);
+            if (e.getButton() == MouseEvent.BUTTON1) {
+                game.pressLeftButton(mouseCoords);
+            }
+            if (e.getButton() == MouseEvent.BUTTON3) {
+                game.pressRightButton(mouseCoords);
+            }
+            if (e.getButton() == MouseEvent.BUTTON2) {
+                game.start();
+                for (Coords coords : Ranges.getAllCoords()) {
+                    Icon icon = new ImageIcon((Image) game.getBox(coords).image);
+                    buttons[coords.x][coords.y].setIcon(icon);
+                    buttons[coords.x][coords.y].repaint();
+                }
+            }
+
+            for (Coords coords : Ranges.getAllCoords()) {
+                if (game.isBoxOpened(coords)) {
+                    Icon icon = new ImageIcon((Image) game.getBox(coords).image);
+                    buttons[coords.x][coords.y].setIcon(icon);
+                    buttons[coords.x][coords.y].repaint();
+                }
+            }
+
+            label.setText(getMessage());
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e) {
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e) {
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e) {
         }
     }
 }

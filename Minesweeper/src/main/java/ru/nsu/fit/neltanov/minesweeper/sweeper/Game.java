@@ -1,16 +1,18 @@
 package ru.nsu.fit.neltanov.minesweeper.sweeper;
 
 public class Game {
-    private Bomb bomb;
-    private Flag flag;
+    private final Bomb bomb;
+    private final Flag flag;
     private GameState state;
+    // TODO: добавить таймер в игру и привязать его к окошку.
+
 
     public GameState getState() {
         return state;
     }
 
     public Game(int cols, int rows, int bombs) {
-        Ranges.setSize(new Coord(cols, rows));
+        Ranges.setSize(new Coords(cols, rows));
         bomb = new Bomb(bombs);
         flag = new Flag();
     }
@@ -21,17 +23,17 @@ public class Game {
         state = GameState.PLAYED;
     }
 
-    public Box getBox(Coord coord) {
-        if (flag.get(coord) == Box.OPENED) {
-            return bomb.get(coord);
+    public Box getBox(Coords coords) {
+        if (flag.get(coords) == Box.OPENED) {
+            return bomb.get(coords);
         } else {
-            return flag.get(coord);
+            return flag.get(coords);
         }
     }
 
-    public void pressLeftButton(Coord coord) {
+    public void pressLeftButton(Coords coords) {
         if (state == GameState.PLAYED) {
-            openBox(coord);
+            openBox(coords);
             checkWin();
         }
     }
@@ -44,25 +46,30 @@ public class Game {
         }
     }
 
-    private void openBox(Coord coord) {
-        switch (flag.get(coord)) {
-            case OPENED -> setOpenedToClosedBoxesAroundNumber(coord);
-            case CLOSED -> {
-                switch (bomb.get(coord)) {
-                    case ZERO -> openBoxesAround(coord);
-                    case BOMB -> {
-                        openBombs(coord);
+    private void openBox(Coords coords) {
+        try {
+            switch (flag.get(coords)) {
+                case OPENED -> setOpenedToClosedBoxesAroundNumber(coords);
+                case CLOSED -> {
+                    switch (bomb.get(coords)) {
+                        case ZERO -> openBoxesAround(coords);
+                        case BOMB -> {
+                            openBombs(coords);
+                        }
+                        default -> flag.setOpenedToBox(coords);
                     }
-                    default -> flag.setOpenedToBox(coord);
                 }
             }
         }
+        catch (NullPointerException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
-    private void setOpenedToClosedBoxesAroundNumber(Coord coord) {
-        if (bomb.get(coord) != Box.BOMB) {
-            if (flag.countOfFlaggedBoxesAroundNumber(coord) == bomb.get(coord).ordinal()) {
-                for (Coord around : Ranges.getCoordsAround(coord)) {
+    private void setOpenedToClosedBoxesAroundNumber(Coords coords) {
+        if (bomb.get(coords) != Box.BOMB) {
+            if (flag.countOfFlaggedBoxesAroundNumber(coords) == bomb.get(coords).ordinal()) {
+                for (Coords around : Ranges.getCoordsAround(coords)) {
                     if (flag.get(around) == Box.CLOSED) {
                         openBox(around);
                     }
@@ -71,29 +78,33 @@ public class Game {
         }
     }
 
-    private void openBoxesAround(Coord coord) {
-        flag.setOpenedToBox(coord);
-        for (Coord around : Ranges.getCoordsAround(coord)) {
+    private void openBoxesAround(Coords coords) {
+        flag.setOpenedToBox(coords);
+        for (Coords around : Ranges.getCoordsAround(coords)) {
             openBox(around);
         }
     }
 
-    private void openBombs(Coord bombedCoord) {
+    private void openBombs(Coords bombedCoords) {
         state = GameState.BOMBED;
-        flag.setBombedToBox(bombedCoord);
-        for (Coord coord : Ranges.getAllCoords()) {
-            if (bomb.get(coord) == Box.BOMB) {
-                flag.setOpenedToClosedBombBox(coord);
+        flag.setBombedToBox(bombedCoords);
+        for (Coords coords : Ranges.getAllCoords()) {
+            if (bomb.get(coords) == Box.BOMB) {
+                flag.setOpenedToClosedBombBox(coords);
             }
             else {
-                flag.setNoBombToFlaggedSafeBox(coord);
+                flag.setNoBombToFlaggedSafeBox(coords);
             }
         }
     }
 
-    public void pressRightButton(Coord coord) {
+    public void pressRightButton(Coords coords) {
         if (state == GameState.PLAYED) {
-            flag.toggleFlagedToBox(coord);
+            flag.toggleFlaggedToBox(coords);
         }
+    }
+
+    public boolean isBoxOpened(Coords coords) {
+        return flag.get(coords) != Box.CLOSED || flag.get(coords) == Box.FLAGGED; // TODO: добавить снятие флага
     }
 }

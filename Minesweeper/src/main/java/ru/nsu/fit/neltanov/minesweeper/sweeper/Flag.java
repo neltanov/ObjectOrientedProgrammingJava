@@ -9,34 +9,34 @@ class Flag {
         countOfClosedBoxes = Ranges.getSize().x * Ranges.getSize().y;
     }
 
-    Box get(Coord coord) {
-        return flagMap.get(coord);
+    Box get(Coords coords) {
+        return flagMap.get(coords);
     }
 
-    public void setOpenedToBox(Coord coord) {
-        flagMap.set(coord, Box.OPENED);
+    public void setOpenedToBox(Coords coords) {
+        flagMap.set(coords, Box.OPENED);
         countOfClosedBoxes--;
     }
 
-    public void setFlaggedToBox(Coord coord) {
-        flagMap.set(coord, Box.FLAGGED);
+    public void setFlaggedToBox(Coords coords) {
+        flagMap.set(coords, Box.FLAGGED);
     }
 
-    public void setClosedToBox(Coord coord) {
-        flagMap.set(coord, Box.CLOSED);
+    public void setClosedToBox(Coords coords) {
+        flagMap.set(coords, Box.CLOSED);
     }
 
-    void setBombedToBox(Coord coord) {
-        flagMap.set(coord, Box.BOMBED);
+    void setBombedToBox(Coords coords) {
+        flagMap.set(coords, Box.BOMBED);
     }
 
     int countOfClosedBoxes() {
         return countOfClosedBoxes;
     }
 
-    public int countOfFlaggedBoxesAroundNumber(Coord coord) {
+    public int countOfFlaggedBoxesAroundNumber(Coords coords) {
         int count = 0;
-        for (Coord around : Ranges.getCoordsAround(coord)) {
+        for (Coords around : Ranges.getCoordsAround(coords)) {
             if (flagMap.get(around) == Box.FLAGGED) {
                 count++;
             }
@@ -44,28 +44,28 @@ class Flag {
         return count;
     }
 
-    private void openBoxesAround(Coord coord) {
-        for (Coord around : Ranges.getCoordsAround(coord)) {
+    private void openBoxesAround(Coords coords) {
+        for (Coords around : Ranges.getCoordsAround(coords)) {
             setOpenedToBox(around);
         }
     }
 
-    public void toggleFlagedToBox(Coord coord) {
-        switch (flagMap.get(coord)) {
-            case FLAGGED -> setClosedToBox(coord);
-            case CLOSED -> setFlaggedToBox(coord);
+    public void toggleFlaggedToBox(Coords coords) {
+        switch (flagMap.get(coords)) {
+            case FLAGGED -> setClosedToBox(coords);
+            case CLOSED -> setFlaggedToBox(coords);
         }
     }
 
-    void setOpenedToClosedBombBox(Coord coord) {
-        if (flagMap.get(coord) == Box.CLOSED) {
-            flagMap.set(coord, Box.OPENED);
+    void setOpenedToClosedBombBox(Coords coords) {
+        if (flagMap.get(coords) == Box.CLOSED) {
+            flagMap.set(coords, Box.OPENED);
         }
     }
 
-    void setNoBombToFlaggedSafeBox(Coord coord) {
-        if (flagMap.get(coord) == Box.FLAGGED) {
-            flagMap.set(coord, Box.NOBOMB);
+    void setNoBombToFlaggedSafeBox(Coords coords) {
+        if (flagMap.get(coords) == Box.FLAGGED) {
+            flagMap.set(coords, Box.NOBOMB);
         }
     }
 }

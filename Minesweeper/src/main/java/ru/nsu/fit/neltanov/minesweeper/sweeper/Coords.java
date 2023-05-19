@@ -1,18 +1,18 @@
 package ru.nsu.fit.neltanov.minesweeper.sweeper;
 
-public class Coord {
+public class Coords {
     public int x;
     public int y;
 
-    public Coord(int x, int y) {
+    public Coords(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (obj instanceof Coord) {
-            return ((Coord) obj).x == x && ((Coord) obj).y == y;
+        if (obj instanceof Coords) {
+            return ((Coords) obj).x == x && ((Coords) obj).y == y;
         }
         return super.equals(obj);
     }

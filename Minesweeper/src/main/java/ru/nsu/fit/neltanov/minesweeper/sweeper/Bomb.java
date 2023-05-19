@@ -16,7 +16,7 @@ class Bomb {
         }
     }
 
-    Box get(Coord coord) {
+    Box get(Coords coord) {
         return bombMap.get(coord);
     }
 
@@ -29,18 +29,18 @@ class Bomb {
 
     private void placeBomb() {
         while (true) {
-            Coord coord = Ranges.getRandomCoord();
-            if (Box.BOMB == bombMap.get(coord)) {
+            Coords coords = Ranges.getRandomCoords();
+            if (Box.BOMB == bombMap.get(coords)) {
                 continue;
             }
-            bombMap.set(coord, Box.BOMB);
-            incrementNumbersAroundTheBomb(coord);
+            bombMap.set(coords, Box.BOMB);
+            incrementNumbersAroundTheBomb(coords);
             break;
         }
     }
 
-    private void incrementNumbersAroundTheBomb(Coord coord) {
-        for (Coord around : Ranges.getCoordsAround(coord)) {
+    private void incrementNumbersAroundTheBomb(Coords coords) {
+        for (Coords around : Ranges.getCoordsAround(coords)) {
             if (Box.BOMB != bombMap.get(around)) {
                 bombMap.set(around, bombMap.get(around).nextNumberBox());
             }
