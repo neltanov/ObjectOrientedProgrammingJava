@@ -16,8 +16,8 @@ class Bomb {
         }
     }
 
-    Box get(Coords coord) {
-        return bombMap.get(coord);
+    Box get(Coords coords) {
+        return bombMap.get(coords);
     }
 
     private void fixBombCount() {

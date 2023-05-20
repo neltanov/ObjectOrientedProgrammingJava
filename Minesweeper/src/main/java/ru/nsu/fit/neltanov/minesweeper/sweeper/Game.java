@@ -20,7 +20,7 @@ public class Game {
     public void start() {
         bomb.start();
         flag.start();
-        state = GameState.PLAYED;
+        state = GameState.IN_GAME;
     }
 
     public Box getBox(Coords coords) {
@@ -32,16 +32,16 @@ public class Game {
     }
 
     public void pressLeftButton(Coords coords) {
-        if (state == GameState.PLAYED) {
+        if (state == GameState.IN_GAME) {
             openBox(coords);
             checkWin();
         }
     }
 
     private void checkWin() {
-        if (state == GameState.PLAYED) {
+        if (state == GameState.IN_GAME) {
             if (flag.countOfClosedBoxes() == bomb.getTotalBombs()) {
-                state = GameState.WINNER;
+                state = GameState.WON;
             }
         }
     }
@@ -53,9 +53,7 @@ public class Game {
                 case CLOSED -> {
                     switch (bomb.get(coords)) {
                         case ZERO -> openBoxesAround(coords);
-                        case BOMB -> {
-                            openBombs(coords);
-                        }
+                        case BOMB -> openBombs(coords);
                         default -> flag.setOpenedToBox(coords);
                     }
                 }
@@ -86,7 +84,7 @@ public class Game {
     }
 
     private void openBombs(Coords bombedCoords) {
-        state = GameState.BOMBED;
+        state = GameState.LOST;
         flag.setBombedToBox(bombedCoords);
         for (Coords coords : Ranges.getAllCoords()) {
             if (bomb.get(coords) == Box.BOMB) {
@@ -99,12 +97,8 @@ public class Game {
     }
 
     public void pressRightButton(Coords coords) {
-        if (state == GameState.PLAYED) {
+        if (state == GameState.IN_GAME) {
             flag.toggleFlaggedToBox(coords);
         }
-    }
-
-    public boolean isBoxOpened(Coords coords) {
-        return flag.get(coords) != Box.CLOSED || flag.get(coords) == Box.FLAGGED; // TODO: добавить снятие флага
     }
 }

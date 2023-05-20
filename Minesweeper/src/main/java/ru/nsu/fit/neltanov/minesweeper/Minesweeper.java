@@ -12,10 +12,10 @@ public class Minesweeper extends JFrame {
     private Game game;
     private JPanel panel;
     private JLabel label;
-    private final int COLS = 9;
-    private final int ROWS = 9;
+    private final int COLS = 20;
+    private final int ROWS = 20;
     private final int IMG_SIZE = 30;
-    private final int BOMBS = 10;
+    private final int BOMBS = 60;
 
     JButton[][] buttons = new JButton[COLS][ROWS];
 
@@ -81,13 +81,13 @@ public class Minesweeper extends JFrame {
 
     private String getMessage() {
         switch (game.getState()) {
-            case PLAYED -> {
+            case IN_GAME -> {
                 return "Think twice";
             }
-            case BOMBED -> {
+            case LOST -> {
                 return "You lose!";
             }
-            case WINNER -> {
+            case WON -> {
                 return "You won! Congratulations!";
             }
             default -> {
@@ -96,15 +96,11 @@ public class Minesweeper extends JFrame {
         }
     }
 
-    private class MouseEventHandler implements MouseListener {
-        @Override
-        public void mouseClicked(MouseEvent e) {
-        }
-
+    private class MouseEventHandler extends MouseAdapter {
         @Override
         public void mousePressed(MouseEvent e) {
-            int x = (e.getXOnScreen() - getX()) / IMG_SIZE;
-            int y = (e.getYOnScreen() - getY() - IMG_SIZE) / IMG_SIZE;
+            int x = e.getComponent().getLocation().x / IMG_SIZE;
+            int y = e.getComponent().getLocation().y / IMG_SIZE;
             Coords mouseCoords = new Coords(x, y);
             if (e.getButton() == MouseEvent.BUTTON1) {
                 game.pressLeftButton(mouseCoords);
@@ -117,31 +113,16 @@ public class Minesweeper extends JFrame {
                 for (Coords coords : Ranges.getAllCoords()) {
                     Icon icon = new ImageIcon((Image) game.getBox(coords).image);
                     buttons[coords.x][coords.y].setIcon(icon);
-                    buttons[coords.x][coords.y].repaint();
                 }
             }
 
             for (Coords coords : Ranges.getAllCoords()) {
-                if (game.isBoxOpened(coords)) {
-                    Icon icon = new ImageIcon((Image) game.getBox(coords).image);
-                    buttons[coords.x][coords.y].setIcon(icon);
-                    buttons[coords.x][coords.y].repaint();
-                }
+                Icon icon = new ImageIcon((Image) game.getBox(coords).image);
+                buttons[coords.x][coords.y].setIcon(icon);
             }
+            panel.repaint();
 
             label.setText(getMessage());
-        }
-
-        @Override
-        public void mouseReleased(MouseEvent e) {
-        }
-
-        @Override
-        public void mouseEntered(MouseEvent e) {
-        }
-
-        @Override
-        public void mouseExited(MouseEvent e) {
         }
     }
 }
