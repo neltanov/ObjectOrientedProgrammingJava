@@ -1,11 +1,12 @@
 package ru.nsu.fit.neltanov.minesweeper.sweeper;
 
+import org.apache.commons.lang3.time.StopWatch;
+
 public class Game {
     private final Bomb bomb;
     private final Flag flag;
     private GameState state;
-    // TODO: добавить таймер в игру и привязать его к окошку.
-
+//    StopWatch stopWatch = new StopWatch();
 
     public GameState getState() {
         return state;
@@ -21,6 +22,7 @@ public class Game {
         bomb.start();
         flag.start();
         state = GameState.IN_GAME;
+//        stopWatch.start();
     }
 
     public Box getBox(Coords coords) {
@@ -53,7 +55,12 @@ public class Game {
                 case CLOSED -> {
                     switch (bomb.get(coords)) {
                         case ZERO -> openBoxesAround(coords);
-                        case BOMB -> openBombs(coords);
+                        case BOMB -> {
+//                            stopWatch.stop();
+//                            System.out.println("Time taken: " + (double) stopWatch.getTime() / 1000 + " seconds");
+//                            stopWatch.reset();
+                            openBombs(coords);
+                        }
                         default -> flag.setOpenedToBox(coords);
                     }
                 }
@@ -85,6 +92,7 @@ public class Game {
 
     private void openBombs(Coords bombedCoords) {
         state = GameState.LOST;
+
         flag.setBombedToBox(bombedCoords);
         for (Coords coords : Ranges.getAllCoords()) {
             if (bomb.get(coords) == Box.BOMB) {

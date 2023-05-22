@@ -1,11 +1,11 @@
 package ru.nsu.fit.neltanov.minesweeper.sweeper;
 
 class Flag {
-    private Matrix flagMap;
+    private FieldLayer flagMap;
     private int countOfClosedBoxes;
 
     void start() {
-        flagMap = new Matrix(Box.CLOSED);
+        flagMap = new FieldLayer(Box.CLOSED);
         countOfClosedBoxes = Ranges.getSize().x * Ranges.getSize().y;
     }
 
@@ -42,12 +42,6 @@ class Flag {
             }
         }
         return count;
-    }
-
-    private void openBoxesAround(Coords coords) {
-        for (Coords around : Ranges.getCoordsAround(coords)) {
-            setOpenedToBox(around);
-        }
     }
 
     public void toggleFlaggedToBox(Coords coords) {
