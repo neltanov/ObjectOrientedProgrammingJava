@@ -1,7 +1,7 @@
 package ru.nsu.fit.neltanov.minesweeper.sweeper;
 
 class Bomb {
-    private Matrix bombMap;
+    private FieldLayer bombMap;
     private int totalBombs;
 
     Bomb(int totalBombs) {
@@ -10,7 +10,7 @@ class Bomb {
     }
 
     void start() {
-        bombMap = new Matrix(Box.ZERO);
+        bombMap = new FieldLayer(Box.ZERO);
         for (int i = 0; i < totalBombs; i++) {
             placeBomb();
         }

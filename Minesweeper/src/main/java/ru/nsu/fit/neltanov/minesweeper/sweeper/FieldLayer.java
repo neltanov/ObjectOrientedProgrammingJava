@@ -1,9 +1,9 @@
 package ru.nsu.fit.neltanov.minesweeper.sweeper;
 
-class Matrix {
+class FieldLayer {
     private final Box[][] matrix;
 
-    Matrix(Box defaultBox) {
+    FieldLayer(Box defaultBox) {
         matrix = new Box[Ranges.getSize().x][Ranges.getSize().y];
         for (Coords coords : Ranges.getAllCoords()) {
             matrix[coords.x][coords.y] = defaultBox;
