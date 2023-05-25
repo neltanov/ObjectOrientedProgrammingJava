@@ -1,4 +1,4 @@
-package ru.nsu.fit.neltanov.minesweeper.sweeper;
+package ru.nsu.fit.neltanov.minesweeper.model;
 
 import java.util.ArrayList;
 import java.util.Random;
