@@ -1,4 +1,4 @@
-package ru.nsu.fit.neltanov.minesweeper.sweeper;
+package ru.nsu.fit.neltanov.minesweeper.model;
 
 import org.apache.commons.lang3.time.StopWatch;
 
@@ -6,7 +6,9 @@ public class Game {
     private final Bomb bomb;
     private final Flag flag;
     private GameState state;
-//    StopWatch stopWatch = new StopWatch();
+
+    StopWatch stopWatch = new StopWatch();
+    private double gameTime;
 
     public GameState getState() {
         return state;
@@ -22,7 +24,7 @@ public class Game {
         bomb.start();
         flag.start();
         state = GameState.IN_GAME;
-//        stopWatch.start();
+        stopWatch.start();
     }
 
     public Box getBox(Coords coords) {
@@ -56,9 +58,7 @@ public class Game {
                     switch (bomb.get(coords)) {
                         case ZERO -> openBoxesAround(coords);
                         case BOMB -> {
-//                            stopWatch.stop();
-//                            System.out.println("Time taken: " + (double) stopWatch.getTime() / 1000 + " seconds");
-//                            stopWatch.reset();
+                            setGameTime();
                             openBombs(coords);
                         }
                         default -> flag.setOpenedToBox(coords);
@@ -108,5 +108,16 @@ public class Game {
         if (state == GameState.IN_GAME) {
             flag.toggleFlaggedToBox(coords);
         }
+    }
+
+    private void setGameTime() {
+        stopWatch.stop();
+        gameTime = (double) stopWatch.getTime() / 1000;
+        System.out.println("Time taken: " + gameTime + " seconds");
+        stopWatch.reset();
+    }
+
+    public double getGameTime() {
+        return gameTime;
     }
 }
