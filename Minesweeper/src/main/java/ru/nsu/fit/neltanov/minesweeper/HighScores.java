@@ -13,10 +13,14 @@ import org.w3c.dom.Element;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Objects;
 
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
+
+import java.util.Arrays;
 
 public class HighScores {
     private DocumentBuilder docBuilder;
@@ -25,6 +29,9 @@ public class HighScores {
 
     TransformerFactory transformerFactory;
     Transformer transformer;
+
+
+    HashMap<String, ArrayList<String>> highscore = new HashMap<>();
 
     public HighScores(String filename) {
         try {
@@ -35,21 +42,17 @@ public class HighScores {
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             docBuilder = dbFactory.newDocumentBuilder();
             document = docBuilder.parse(new File(filename));
-//            writeToConsole();
         } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
             assert docBuilder != null;
             resetHighscores();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
     private void writeToXmlFile() {
         try {
-            // Write the content into xml file
-
             DOMSource source = new DOMSource(document);
             StreamResult result = new StreamResult(new File(filename));
             transformer.transform(source, result);
@@ -107,49 +110,39 @@ public class HighScores {
         return player;
     }
 
-    public void parseXmlDocument() {
+    public HashMap<String, ArrayList<ArrayList<String>>> parseXmlDocument() {
+        HashMap<String, ArrayList<ArrayList<String>>> highscores = new HashMap<>();
         try {
-            File inputFile = new File("./src/main/resources/highScores.xml");
-
-            Document doc = docBuilder.parse(inputFile);
-            doc.getDocumentElement().normalize();
-            System.out.println("Root element :" + doc.getDocumentElement().getNodeName());
-            NodeList nList = doc.getElementsByTagName("student");
-            System.out.println("----------------------------");
+            document.getDocumentElement().normalize();
+            NodeList nList = document.getElementsByTagName("level");
 
             for (int temp = 0; temp < nList.getLength(); temp++) {
                 Node nNode = nList.item(temp);
-                System.out.println("\nCurrent Element :" + nNode.getNodeName());
 
-                if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-                    Element eElement = (Element) nNode;
-                    System.out.println("Student roll no : "
-                            + eElement.getAttribute("rollno"));
-                    System.out.println("First Name : "
-                            + eElement
-                            .getElementsByTagName("firstname")
-                            .item(0)
-                            .getTextContent());
-                    System.out.println("Last Name : "
-                            + eElement
-                            .getElementsByTagName("lastname")
-                            .item(0)
-                            .getTextContent());
-                    System.out.println("Nick Name : "
-                            + eElement
-                            .getElementsByTagName("nickname")
-                            .item(0)
-                            .getTextContent());
-                    System.out.println("Marks : "
-                            + eElement
-                            .getElementsByTagName("marks")
-                            .item(0)
-                            .getTextContent());
+                if (nNode.getNodeType() != Node.ELEMENT_NODE) {
+                    continue;
                 }
+                Element eElement = (Element) nNode;
+                NodeList pList = eElement.getElementsByTagName("player");
+                ArrayList<ArrayList<String>> arr = new ArrayList<>();
+                for (int i = 0; i < pList.getLength(); i++) {
+                    Node pNode = pList.item(i);
+                    if (pNode.getNodeType() == Node.ELEMENT_NODE) {
+                        Element pElement = (Element) pNode;
+                        if (!pElement.getAttribute("name").equals("none")) {
+                            ArrayList<String> highscore = new ArrayList<>(2);
+                            highscore.add(pElement.getAttribute("name"));
+                            highscore.add(pElement.getTextContent());
+                            arr.add(highscore);
+                        }
+                    }
+                }
+                highscores.put(eElement.getAttribute("levelName"), arr);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return highscores;
     }
 
     public void updateHighscore(String levelName, String playerName, double value) {
@@ -177,6 +170,7 @@ public class HighScores {
                             if (value <= Double.parseDouble(pElement.getTextContent()) || Objects.equals(pElement.getTextContent(), "0.0")) {
                                 lElement.insertBefore(createPlayer(playerName, value), pElement);
                                 lElement.removeChild(lElement.getLastChild());
+                                lElement.removeChild(lElement.getLastChild());
                                 writeToXmlFile();
                                 break;
                             }
@@ -184,7 +178,6 @@ public class HighScores {
                     }
                 }
             }
-            writeToConsole();
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -3,6 +3,9 @@ package ru.nsu.fit.neltanov.minesweeper.model;
 import org.apache.commons.lang3.time.StopWatch;
 import ru.nsu.fit.neltanov.minesweeper.HighScores;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public class Game {
     private final Bomb bomb;
     private final Flag flag;
@@ -22,6 +25,7 @@ public class Game {
     public Game(int cols, int rows, int bombs) {
         level = defineLevel(cols, rows, bombs);
         highScores = new HighScores("./src/main/resources/highScores.xml");
+        highScores.parseXmlDocument();
         Ranges.setSize(new Coords(cols, rows));
         bomb = new Bomb(bombs);
         flag = new Flag();
@@ -50,6 +54,10 @@ public class Game {
 
     public void resetHighscores() {
         highScores.resetHighscores();
+    }
+
+    public HashMap<String, ArrayList<ArrayList<String>>> getHighscores() {
+        return highScores.parseXmlDocument();
     }
 
     public void enterPlayerName(String playerName) {
