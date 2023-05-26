@@ -11,6 +11,7 @@ public class Minesweeper {
     public static void runMinesweeperGUI(int cols, int rows, int bombs) {
         Game game = new Game(cols, rows, bombs);
         game.start();
+//        game.resetHighscores();
         new MinesweeperGUI(game, cols, rows, bombs);
     }
 }

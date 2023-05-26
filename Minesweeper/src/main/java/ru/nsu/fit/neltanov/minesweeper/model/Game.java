@@ -1,11 +1,16 @@
 package ru.nsu.fit.neltanov.minesweeper.model;
 
 import org.apache.commons.lang3.time.StopWatch;
+import ru.nsu.fit.neltanov.minesweeper.HighScores;
 
 public class Game {
     private final Bomb bomb;
     private final Flag flag;
     private GameState state;
+
+    private String playerName;
+    private final String level;
+    private final HighScores highScores;
 
     StopWatch stopWatch = new StopWatch();
     private double gameTime;
@@ -15,16 +20,40 @@ public class Game {
     }
 
     public Game(int cols, int rows, int bombs) {
+        level = defineLevel(cols, rows, bombs);
+        highScores = new HighScores("./src/main/resources/highScores.xml");
         Ranges.setSize(new Coords(cols, rows));
         bomb = new Bomb(bombs);
         flag = new Flag();
+
+        enterPlayerName("bayarto");
     }
 
     public void start() {
         bomb.start();
         flag.start();
-        state = GameState.IN_GAME;
-        stopWatch.start();
+        state = GameState.IN_PAUSE;
+    }
+
+    private String defineLevel(int cols, int rows, int bombs) {
+        if (cols == 9 && rows == 9 && bombs == 10) {
+            return "easy";
+        }
+        if (cols == 16 && rows == 16 && bombs == 40) {
+            return "medium";
+        }
+        if (cols == 30 && rows == 16 && bombs == 99) {
+            return "hard";
+        }
+        return "custom";
+    }
+
+    public void resetHighscores() {
+        highScores.resetHighscores();
+    }
+
+    public void enterPlayerName(String playerName) {
+        this.playerName = playerName;
     }
 
     public Box getBox(Coords coords) {
@@ -36,6 +65,16 @@ public class Game {
     }
 
     public void pressLeftButton(Coords coords) {
+        if (state == GameState.IN_PAUSE) {
+            stopWatch.start();
+            if (flag.get(coords) == Box.CLOSED && bomb.get(coords) == Box.BOMB) {
+                setGameTime();
+                System.out.println("First bomb!1!!!");
+                start();
+                pressLeftButton(coords);
+            }
+            state = GameState.IN_GAME;
+        }
         if (state == GameState.IN_GAME) {
             openBox(coords);
             checkWin();
@@ -45,7 +84,9 @@ public class Game {
     private void checkWin() {
         if (state == GameState.IN_GAME) {
             if (flag.countOfClosedBoxes() == bomb.getTotalBombs()) {
+                setGameTime();
                 state = GameState.WON;
+                highScores.updateHighscore(level, playerName, gameTime);
             }
         }
     }
@@ -113,7 +154,6 @@ public class Game {
     private void setGameTime() {
         stopWatch.stop();
         gameTime = (double) stopWatch.getTime() / 1000;
-        System.out.println("Time taken: " + gameTime + " seconds");
         stopWatch.reset();
     }
 

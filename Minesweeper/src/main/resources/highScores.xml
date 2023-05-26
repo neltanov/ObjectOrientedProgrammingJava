@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><levels>
+    <level levelName="easy">
+        <player name="bayarto">11.638</player>
+        <player name="bayarto">19.095</player>
+        <player name="bayarto">20.641</player>
+        <player name="bayarto">25.704</player>
+        <player name="bayarto">33.016</player><player name="none">0.0</player>
+        <player name="none">0.0</player>
+        <player name="none">0.0</player></level>
+    <level levelName="medium">
+        <player name="none">0.0</player>
+        <player name="none">0.0</player>
+        <player name="none">0.0</player>
+        <player name="none">0.0</player>
+        <player name="none">0.0</player>
+    </level>
+    <level levelName="hard">
+        <player name="none">0.0</player>
+        <player name="none">0.0</player>
+        <player name="none">0.0</player>
+        <player name="none">0.0</player>
+        <player name="none">0.0</player>
+    </level>
+</levels>
