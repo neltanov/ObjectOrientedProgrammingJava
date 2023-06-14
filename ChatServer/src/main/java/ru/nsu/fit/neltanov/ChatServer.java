@@ -9,12 +9,20 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 public class ChatServer {
+    private static volatile boolean isRunning = true;
     public ChatServer() {
-        ExecutorService executorService = new ThreadPoolExecutor(1, 10,
+        ExecutorService executorService = new ThreadPoolExecutor(10, 10,
                 0, TimeUnit.SECONDS, new LinkedBlockingQueue<>());
         try (ServerSocket serverSocket = new ServerSocket(21209)) {
             System.out.println("The server is running...");
-            while (true) {
+
+            Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+                isRunning = false;
+                executorService.shutdown();
+                System.out.println("Server has been stopped.");
+            }));
+
+            while (isRunning) {
                 Socket clientSocket = serverSocket.accept();
                 System.out.println("Client has been connected to server");
                 executorService.execute(new ClientHandler(clientSocket));

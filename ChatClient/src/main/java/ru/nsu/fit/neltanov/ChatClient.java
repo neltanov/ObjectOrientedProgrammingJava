@@ -8,9 +8,9 @@ public class ChatClient {
     public ChatClient() {
         try (
                 Socket clientSocket = new Socket(InetAddress.getLocalHost(), 21209);
+                BufferedReader inputReader = new BufferedReader(new InputStreamReader(System.in));
+                PrintWriter writer = new PrintWriter(clientSocket.getOutputStream(), true);
                 BufferedReader reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-                PrintWriter writer = new PrintWriter(clientSocket.getOutputStream());
-                BufferedReader inputReader = new BufferedReader(new InputStreamReader(System.in))
         ) {
             String input;
             while ((input = inputReader.readLine()) != null) {
