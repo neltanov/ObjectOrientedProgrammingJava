@@ -1,14 +1,12 @@
 package ru.nsu.fit.neltanov;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.Socket;
+import java.net.SocketTimeoutException;
 
 class ClientHandler implements Runnable{
     private final Socket clientSocket;
-    private PrintWriter writer;
+    private static final int TIMEOUT = 10000;
 
     public ClientHandler(Socket clientSocket) {
         this.clientSocket = clientSocket;
@@ -16,27 +14,29 @@ class ClientHandler implements Runnable{
 
     @Override
     public void run() {
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
-            writer = new PrintWriter(clientSocket.getOutputStream(), true);
-            String line;
-            while ((line = reader.readLine()) != null) {
-                System.out.println("Client: " + line);
-                sendMessageEveryone(line);
+        try (ObjectInputStream reader = new ObjectInputStream(clientSocket.getInputStream());
+            ObjectOutputStream writer = new ObjectOutputStream(clientSocket.getOutputStream())) {
+            while (true) {
+                clientSocket.setSoTimeout(TIMEOUT);
+                Message message = (Message) reader.readObject();
+                System.out.println("Client " + message.getSender() + ": " + message.getMessage());
+                writer.writeObject(message);
+                writer.flush();
             }
+        } catch (SocketTimeoutException e) {
+            System.out.println("The timeout has been exceeded. Disabling the client "
+                    + clientSocket.getLocalSocketAddress());
+
         }
-        catch (IOException e) {
+        catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         } finally {
             try {
-                System.out.println("Client has been disconnected");
+                System.out.println("Client " + clientSocket.getLocalSocketAddress() + " has been disconnected");
                 clientSocket.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-    }
-
-    private synchronized void sendMessageEveryone(String message) {
-        writer.println(message);
     }
 }

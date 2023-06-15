@@ -10,7 +10,10 @@ import java.util.concurrent.TimeUnit;
 
 public class ChatServer {
     private static volatile boolean isRunning = true;
-    public ChatServer() {
+
+    public ChatServer() {}
+
+    public void start() {
         ExecutorService executorService = new ThreadPoolExecutor(10, 10,
                 0, TimeUnit.SECONDS, new LinkedBlockingQueue<>());
         try (ServerSocket serverSocket = new ServerSocket(21209)) {
@@ -24,7 +27,7 @@ public class ChatServer {
 
             while (isRunning) {
                 Socket clientSocket = serverSocket.accept();
-                System.out.println("Client has been connected to server");
+                System.out.println("Client " + clientSocket.getLocalSocketAddress() + " has been connected to server");
                 executorService.execute(new ClientHandler(clientSocket));
             }
         }
