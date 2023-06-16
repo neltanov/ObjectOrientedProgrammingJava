@@ -48,21 +48,20 @@ public class ChatClient {
             Timer timer = new Timer();
             timer.scheduleAtFixedRate(new HeartbeatTask(writer, clientName), TIMEOUT, TIMEOUT);
 
-            sendMessage(new Message(clientName, "Auth message"));
+            sendAuthMessage();
 
-            String stringMessage;
-            while (true) {
-                stringMessage = scanner.nextLine();
-                if ("exit".equals(stringMessage)) {
-                    serverReaderThread.interrupt();
-                    break;
-                }
-
-                sendMessage(new Message(clientName, stringMessage));
-
-                timer.cancel();
-                timer = new Timer();
-                timer.scheduleAtFixedRate(new HeartbeatTask(writer, clientName), TIMEOUT, TIMEOUT);
+//            String stringMessage;
+            while (isRunning) {
+//                stringMessage = scanner.nextLine();
+//                if ("exit".equals(stringMessage)) {
+//                    serverReaderThread.interrupt();
+//                    break;
+//                }
+//                sendMessage(new Message(clientName, stringMessage));
+//
+//                timer.cancel();
+//                timer = new Timer();
+//                timer.scheduleAtFixedRate(new HeartbeatTask(writer, clientName), TIMEOUT, TIMEOUT);
             }
             timer.cancel();
 //            serverReaderThread.interrupt();
@@ -80,6 +79,10 @@ public class ChatClient {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void sendAuthMessage() {
+        sendMessage(new Message(clientName, "Auth message"));
     }
 
     String getClientName() {
