@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -15,7 +17,7 @@ public class ChatServer {
 
     private static volatile boolean isRunning = true;
     private static final List<Message> messageHistory = new ArrayList<>();
-    private static final List<ClientHandler> clientList = new ArrayList<>();
+    private static final Map<ClientHandler, String> clientList = new HashMap<>();
 
     public ChatServer(int port) {
         this.port = port;
@@ -35,10 +37,7 @@ public class ChatServer {
 
             while (isRunning) {
                 Socket clientSocket = serverSocket.accept();
-                System.out.println("Client " + clientSocket.getLocalSocketAddress() + " has been connected to server");
-
                 ClientHandler clientHandler = new ClientHandler(clientSocket, messageHistory, clientList);
-                clientList.add(clientHandler);
                 executorService.execute(clientHandler);
             }
         }
@@ -47,5 +46,9 @@ public class ChatServer {
         } finally {
             executorService.shutdown();
         }
+    }
+
+    public List<String> getClientList() {
+        return (List<String>) clientList.values();
     }
 }

@@ -8,9 +8,12 @@ import java.util.Scanner;
 import java.util.Timer;
 
 public class ChatClient {
-    private static boolean isRunning = true;
+    private MessageListener messageListener;
+    private boolean isRunning = true;
     private final String clientName;
     private static final int TIMEOUT = 5000;
+
+    private ObjectOutputStream outputStream;
 
     public ChatClient(String clientName) {
         this.clientName = clientName;
@@ -23,15 +26,20 @@ public class ChatClient {
                 ObjectOutputStream writer = new ObjectOutputStream(clientSocket.getOutputStream());
                 ObjectInputStream reader = new ObjectInputStream(clientSocket.getInputStream())
         ) {
+            this.outputStream = writer;
 
             Thread serverReaderThread = new Thread(() -> {
                 try {
                     Message message;
-                    while (isRunning) {
+                    while (!Thread.currentThread().isInterrupted()) {
                         message = (Message) reader.readObject();
+                        notifyMessageListener(message);
                         System.out.println(message.getSender() + ": " + message.getMessage());
                     }
-                } catch (IOException | ClassNotFoundException e) {
+                } catch (EOFException e) {
+                    System.out.println("Reader thread was ended");
+                }
+                catch (IOException | ClassNotFoundException e) {
                     e.printStackTrace();
                 }
             });
@@ -40,27 +48,51 @@ public class ChatClient {
             Timer timer = new Timer();
             timer.scheduleAtFixedRate(new HeartbeatTask(writer, clientName), TIMEOUT, TIMEOUT);
 
-            String stringMessage;
-            while (isRunning) {
-                stringMessage = scanner.nextLine();
+            sendMessage(new Message(clientName, "Auth message"));
 
+            String stringMessage;
+            while (true) {
+                stringMessage = scanner.nextLine();
                 if ("exit".equals(stringMessage)) {
-                    isRunning = false;
+                    serverReaderThread.interrupt();
+                    break;
                 }
 
-                writer.writeObject(new Message(clientName, stringMessage));
-                writer.flush();
+                sendMessage(new Message(clientName, stringMessage));
 
                 timer.cancel();
                 timer = new Timer();
                 timer.scheduleAtFixedRate(new HeartbeatTask(writer, clientName), TIMEOUT, TIMEOUT);
             }
             timer.cancel();
-            serverReaderThread.join();
+//            serverReaderThread.interrupt();
         } catch (SocketException e) {
             System.out.println(e.getMessage());
-        } catch (IOException | InterruptedException e) {
+        } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    public void sendMessage(Message message) {
+        try {
+            outputStream.writeObject(message);
+            outputStream.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    String getClientName() {
+        return clientName;
+    }
+
+    public void setMessageListener(MessageListener listener) {
+        this.messageListener = listener;
+    }
+
+    private void notifyMessageListener(Message message) {
+        if (messageListener != null) {
+            messageListener.onMessageReceived(message);
         }
     }
 }

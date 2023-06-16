@@ -5,6 +5,7 @@ import java.net.Socket;
 import java.net.SocketException;
 import java.net.SocketTimeoutException;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 class ClientHandler implements Runnable {
@@ -12,11 +13,11 @@ class ClientHandler implements Runnable {
     private static final int TIMEOUT = 10000;
 
     private final List<Message> messageHistory;
-    private final List<ClientHandler> clientList;
+    private final Map<ClientHandler, String> clientList;
 
     private ObjectOutputStream outputStream;
 
-    public ClientHandler(Socket clientSocket, List<Message> messageHistory, List<ClientHandler> clientList) {
+    public ClientHandler(Socket clientSocket, List<Message> messageHistory, Map<ClientHandler, String> clientList) {
         this.clientSocket = clientSocket;
         this.messageHistory = messageHistory;
         this.clientList = clientList;
@@ -29,7 +30,13 @@ class ClientHandler implements Runnable {
 
             this.outputStream = writer;
 
+            Message authMessage = (Message) reader.readObject();
+            clientList.put(this, authMessage.getSender());
+
             sendHistoryToClient();
+            Message joinMessage = new Message("Server", clientList.get(this) + " joined the chat");
+            addToMessageHistory(joinMessage);
+            broadcastMessage(joinMessage);
 
             while (true) {
                 clientSocket.setSoTimeout(TIMEOUT);
@@ -44,23 +51,24 @@ class ClientHandler implements Runnable {
             }
         } catch (SocketException e) {
             System.out.println(e.getMessage());
+            disconnectClient();
         }
         catch (SocketTimeoutException e) {
+            disconnectClient();
             System.out.println("The timeout has been exceeded. Disabling the client "
                     + clientSocket.getLocalSocketAddress());
         }
         catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         } finally {
-            disconnectClient();
+//            disconnectClient();
         }
     }
 
     private void sendHistoryToClient() throws IOException {
         synchronized (messageHistory) {
             for (Message message : messageHistory) {
-                outputStream.writeObject(message);
-                outputStream.flush();
+                sendMessage(message);
             }
         }
     }
@@ -76,8 +84,8 @@ class ClientHandler implements Runnable {
 
     private void broadcastMessage(Message message) throws IOException {
         synchronized (clientList) {
-            for (ClientHandler client : clientList) {
-                    client.sendMessage(message);
+            for (ClientHandler client : clientList.keySet()) {
+                client.sendMessage(message);
             }
         }
     }
@@ -89,10 +97,12 @@ class ClientHandler implements Runnable {
 
     private void disconnectClient() {
         try {
-            System.out.println(clientSocket.getLocalSocketAddress()
-                    + ":" + clientSocket.getPort() + " disconnected.");
-            clientSocket.close();
-        } catch (IOException e) {
+            broadcastMessage(new Message("Server", clientList.get(this) + " disconnected."));
+//            clientSocket.close();
+        } catch (SocketException e) {
+            System.out.println(e.getMessage());
+        }
+        catch (IOException e) {
             e.printStackTrace();
         } finally {
             synchronized (clientList) {
