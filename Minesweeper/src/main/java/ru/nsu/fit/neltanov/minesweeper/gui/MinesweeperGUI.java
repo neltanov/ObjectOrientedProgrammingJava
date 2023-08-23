@@ -3,6 +3,8 @@ package ru.nsu.fit.neltanov.minesweeper.gui;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Objects;
 
 import ru.nsu.fit.neltanov.minesweeper.model.*;
@@ -98,6 +100,7 @@ public class MinesweeperGUI extends JFrame {
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
                 setLevelParameters(9, 9, 10);
+                newGame();
             }
         });
 
@@ -106,6 +109,7 @@ public class MinesweeperGUI extends JFrame {
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
                 setLevelParameters(16, 16, 40);
+                newGame();
             }
         });
 
@@ -114,6 +118,7 @@ public class MinesweeperGUI extends JFrame {
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
                 setLevelParameters(30, 16, 99);
+                newGame();
             }
         });
 
@@ -122,6 +127,9 @@ public class MinesweeperGUI extends JFrame {
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
                 JOptionPane.showMessageDialog(getContentPane(), "Coming soon...");
+                game.getHighscores();
+                HashMap<String, ArrayList<ArrayList<String>>> highscores = game.getHighscores();
+                StringBuilder highscoreText = new StringBuilder();
             }
         });
 
@@ -129,8 +137,7 @@ public class MinesweeperGUI extends JFrame {
             @Override
             public void mousePressed(MouseEvent e) {
                 super.mousePressed(e);
-                dispose();
-                runMinesweeperGUI(COLS, ROWS, BOMBS);
+                newGame();
             }
         });
 
@@ -152,6 +159,11 @@ public class MinesweeperGUI extends JFrame {
         menu.add(settings);
         menuBar.add(menu);
         add(menuBar, "North");
+    }
+
+    private void newGame() {
+        dispose();
+        runMinesweeperGUI(COLS, ROWS, BOMBS);
     }
 
     private void setLevelParameters(int cols, int rows, int bombs) {

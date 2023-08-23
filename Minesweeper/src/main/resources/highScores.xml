@@ -1,12 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<levels>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><levels>
     <level levelName="easy">
         <player name="bayarto">16.96</player>
+        <player name="bayarto">16.99</player>
         <player name="bayarto">23.758</player>
         <player name="bayarto">27.542</player>
         <player name="none">0.0</player>
-        <player name="none">0.0</player>
-    </level>
+        </level>
     <level levelName="medium">
         <player name="bayarto">90.009</player>
         <player name="none">0.0</player>
